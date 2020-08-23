@@ -6,7 +6,7 @@ class PipePair{
         this.scaleY = height;
         this.sprite = new Image();
         this.sprite.src = "https://Seiji-Welsh.github.io/FlappyBird/Images/Pipe.png";
-        this.pipeDistance = 75;
+        this.pipeDistance = 85;
         this.pointCollected = false;
     }
     Update(){

@@ -112,4 +112,4 @@ let mainCamera;
 SceneManager.Load(SceneManager.Scene1);
 setTimeout(function(){
     Update();
-}, 10)
+}, 200)
