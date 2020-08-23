@@ -111,7 +111,7 @@ function clearTiles(){
             i--;
         }
     }
-    spawnEntity(new Entity("round","ground",[new Renderer(1,"file:///Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideLeftUpRightDown.png",32,32,false),new RectangleCollider(32,32,0,0)],"tile"),0,-32,1,1,0)
+    spawnEntity(new Entity("round","ground",[new Renderer(1,"https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideLeftUpRightDown.png",32,32,false),new RectangleCollider(32,32,0,0)],"tile"),0,-32,1,1,0)
 }
 function updateTiles(){
     for(let i = 1; i <= entities.length; i++){
@@ -153,145 +153,145 @@ function updateTiles(){
                 }
             }
             if(hasRight && hasLeft && hasBottom && hasAbove){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstNone.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstNone.png";
             }
             else if(!hasAbove && hasRight && hasLeft && hasBottom){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideUp.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideUp.png";
             }
             else if(!hasBottom && hasRight && hasLeft && hasAbove){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideDown.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideDown.png";
             }
             else if(!hasRight && hasAbove && hasBottom && hasLeft){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideRight.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideRight.png";
             }
             else if(!hasLeft && hasAbove && hasBottom && hasRight){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideLeft.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideLeft.png";
             }
             else if(!hasLeft && !hasAbove && hasRight && hasBottom){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideLeftUp.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideLeftUp.png";
             }
             else if(!hasAbove && !hasRight && hasBottom && hasLeft){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideUpRight.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideUpRight.png";
             }
             else if(!hasRight && !hasBottom && hasLeft && hasAbove){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideRightDown.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideRightDown.png";
             }
             else if(!hasBottom && !hasLeft && hasAbove && hasRight){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideDownLeft.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideDownLeft.png";
             }
             else if(!hasAbove && !hasBottom && hasRight && hasLeft){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideUpDown.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideUpDown.png";
             }
             else if(!hasLeft && !hasRight && hasBottom && hasAbove){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideLeftRight.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideLeftRight.png";
             }
             else if(!hasLeft && !hasRight && !hasAbove && hasBottom){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideLeftUpRight.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideLeftUpRight.png";
             }
             else if(!hasLeft && !hasRight && hasAbove && !hasBottom){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideRightDownLeft.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideRightDownLeft.png";
             }
             else if(!hasAbove && !hasBottom && !hasLeft && hasRight){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideDownLeftUp.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideDownLeftUp.png";
             }
             else if(!hasAbove && !hasBottom && hasLeft && !hasRight){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideUpRightDown.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideUpRightDown.png";
             }
             else if(!hasAbove && !hasBottom && !hasLeft && !hasRight){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideLeftUpRightDown.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideLeftUpRightDown.png";
             }
             if(!hasNW && hasLeft && hasAbove && hasRight && hasBottom && hasNE && hasSW && hasSE){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstCornerNW.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstCornerNW.png";
             }
             else if(hasNW && hasLeft && hasAbove && hasRight && hasBottom && !hasNE && hasSW && hasSE){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstCornerNE.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstCornerNE.png";
             }
             else if(hasNW && hasLeft && hasAbove && hasRight && hasBottom && hasNE && !hasSW && hasSE){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstCornerSW.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstCornerSW.png";
             }
             else if(hasNW && hasLeft && hasAbove && hasRight && hasBottom && hasNE && hasSW && !hasSE){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstCornerSE.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstCornerSE.png";
             }
             else if(!hasNW && hasLeft && hasAbove && hasRight && hasBottom && !hasNE && !hasSW && !hasSE){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstCornerNWNESWSE.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstCornerNWNESWSE.png";
             }
             else if(!hasNW && hasLeft && hasAbove && hasRight && hasBottom && hasNE && !hasSW && hasSE){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstCornerNWSW.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstCornerNWSW.png";
             }
             else if(!hasNW && hasLeft && hasAbove && hasRight && hasBottom && !hasNE && hasSW && hasSE){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstCornerNWNE.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstCornerNWNE.png";
             }
             else if(hasNW && hasLeft && hasAbove && hasRight && hasBottom && !hasNE && hasSW && !hasSE){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstCornerNESE.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstCornerNESE.png";
             }
             else if(hasNW && hasLeft && hasAbove && hasRight && hasBottom && hasNE && !hasSW && !hasSE){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstCornerSWSE.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstCornerSWSE.png";
             }
             else if(!hasLeft && !hasAbove && hasRight && hasBottom && !hasSE){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideLeftUpCornerSE.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideLeftUpCornerSE.png";
             }
             else if(hasLeft && !hasAbove && !hasRight && hasBottom && !hasSW){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideUpRightCornerSW.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideUpRightCornerSW.png";
             }
             else if(!hasNW && hasLeft && hasAbove && !hasRight && !hasBottom){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideRightDownCornerNW.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideRightDownCornerNW.png";
             }
             else if(!hasLeft && hasAbove && hasRight && !hasBottom && !hasNE){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideDownLeftCornerNE.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideDownLeftCornerNE.png";
             }
             else if(hasLeft && !hasAbove && hasRight && hasBottom && !hasSE && hasSW){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideUpCornerSE.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideUpCornerSE.png";
             }
             else if(hasLeft && !hasAbove && hasRight && hasBottom && !hasSW && hasSE){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideUpCornerSW.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideUpCornerSW.png";
             }
             else if(hasLeft && hasAbove && hasRight && !hasBottom && !hasNE && hasNW){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideDownCornerNE.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideDownCornerNE.png";
             }
             else if(hasLeft && hasAbove && hasRight && !hasBottom && hasNE && !hasNW){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideDownCornerNW.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideDownCornerNW.png";
             }
             else if(hasLeft && hasAbove && hasRight && hasBottom && !hasNE && hasNW && !hasSW && hasSE){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstCornerNESW.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstCornerNESW.png";
             }
             else if(hasLeft && hasAbove && hasRight && hasBottom && hasNE && !hasNW && !hasSE && hasSW){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstCornerNWSE.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstCornerNWSE.png";
             }
             else if(!hasLeft && hasAbove && hasRight && hasBottom && !hasSE && hasNE){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideLeftCornerSE.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideLeftCornerSE.png";
             }
             else if(!hasLeft && hasAbove && hasRight && hasBottom && !hasNE && hasSE){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideLeftCornerNE.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideLeftCornerNE.png";
             }
             else if(hasLeft && hasAbove && !hasRight && hasBottom && !hasSW && hasNW){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideRightCornerSW.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideRightCornerSW.png";
             }
             else if(hasLeft && hasAbove && !hasRight && hasBottom && !hasNW && hasSW){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideRightCornerNW.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideRightCornerNW.png";
             }
             else if(hasLeft && hasAbove && hasRight && hasBottom && !hasNW && !hasSW && !hasSE && hasNE){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstCornerNWSWSE.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstCornerNWSWSE.png";
             }
             else if(hasLeft && hasAbove && hasRight && hasBottom && !hasSW && !hasNE && !hasSE && hasNW){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstCornerNESWSE.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstCornerNESWSE.png";
             }
             else if(hasLeft && hasAbove && hasRight && hasBottom && !hasSW && !hasNE && hasSE && !hasNW){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstCornerNWNESW.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstCornerNWNESW.png";
             }
             else if(hasLeft && hasAbove && hasRight && hasBottom && hasSW && !hasNE && !hasSE && !hasNW){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstCornerNWNESE.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstCornerNWNESE.png";
             }
             else if(hasLeft && hasAbove && !hasRight && hasBottom && !hasNW && !hasSW){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideRightCornerNWSW.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideRightCornerNWSW.png";
             }
             else if(hasLeft && hasAbove && hasRight && !hasBottom && !hasNW && !hasNE){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideDownCornerNWNE.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideDownCornerNWNE.png";
             }
             else if(!hasLeft && hasAbove && hasRight && hasBottom && !hasNE && !hasSE){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideLeftCornerNESE.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideLeftCornerNESE.png";
             }
             else if(hasLeft && !hasAbove && hasRight && hasBottom && !hasSW && !hasSE){
-                entities[i - 1].GetComponent(Renderer).img.src = "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideUpCornerSWSE.png";
+                entities[i - 1].GetComponent(Renderer).img.src = "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideUpCornerSWSE.png";
             }
         }
     }

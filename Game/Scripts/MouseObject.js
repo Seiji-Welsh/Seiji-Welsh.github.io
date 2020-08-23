@@ -18,21 +18,21 @@ class MouseObject extends Component{
                 switch(selectedTile){
                     case "grassTile":
                         if(useColliders){
-                            spawnEntity(new Entity("grass", "ground", [new Renderer(sortOrderHTML.value, "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/Grass/Grass.png", 32, 32, false), new RectangleCollider(32, 32, 0, 0)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
+                            spawnEntity(new Entity("grass", "ground", [new Renderer(sortOrderHTML.value, "https://Seiji-Welsh.github.io/Game/Images/Tiles/Grass/Grass.png", 32, 32, false), new RectangleCollider(32, 32, 0, 0)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
                         }
-                        else spawnEntity(new Entity("grass", "ground", [new Renderer(sortOrderHTML.value, "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/Grass/Grass.png", 32, 32, false)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
+                        else spawnEntity(new Entity("grass", "ground", [new Renderer(sortOrderHTML.value, "https://Seiji-Welsh.github.io/Game/Images/Tiles/Grass/Grass.png", 32, 32, false)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
                         break;
                     case "woodTile":
                         if(useColliders){
-                            spawnEntity(new Entity("wood", "ground", [new Renderer(sortOrderHTML.value, "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/Wood/Wood.png", 32, 32, false), new RectangleCollider(32, 32, 0, 0)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
+                            spawnEntity(new Entity("wood", "ground", [new Renderer(sortOrderHTML.value, "https://Seiji-Welsh.github.io/Game/Images/Tiles/Wood/Wood.png", 32, 32, false), new RectangleCollider(32, 32, 0, 0)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
                         }
-                        else spawnEntity(new Entity("wood", "ground", [new Renderer(sortOrderHTML.value, "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/Wood/Wood.png", 32, 32, false)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
+                        else spawnEntity(new Entity("wood", "ground", [new Renderer(sortOrderHTML.value, "https://Seiji-Welsh.github.io/Game/Images/Tiles/Wood/Wood.png", 32, 32, false)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
                         break;
                     case "roundTile":
                         if(useColliders){
-                            spawnEntity(new Entity("round", "ground", [new Renderer(sortOrderHTML.value, "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstNone.png", 32, 32, false), new RectangleCollider(32, 32, 0, 0)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
+                            spawnEntity(new Entity("round", "ground", [new Renderer(sortOrderHTML.value, "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstNone.png", 32, 32, false), new RectangleCollider(32, 32, 0, 0)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
                         }
-                        else spawnEntity(new Entity("round", "ground", [new Renderer(sortOrderHTML.value, "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Tiles/RoundTilesTest/RndTlsTstNone.png", 32, 32, false)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
+                        else spawnEntity(new Entity("round", "ground", [new Renderer(sortOrderHTML.value, "https://Seiji-Welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstNone.png", 32, 32, false)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
                         if(autoTile.checked)
                         updateTiles();
                         break;
