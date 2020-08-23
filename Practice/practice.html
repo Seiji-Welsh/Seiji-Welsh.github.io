@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            text-align: center;
+            background-color: gray;
+        }
+        #container{
+            border: 2px solid rgb(110, 110, 110);
+            background-color: rgb(41, 41, 41);
+            width: fit-content;
+            margin: auto;
+        }
+        #topPanel{
+            padding-bottom: 150px;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+            vertical-align: middle;
+        }
+        main{
+            padding-bottom: 430px;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+            clear: both;
+        }
+        #bottomPanel{
+            margin-left: auto;
+            margin-right: auto;
+            clear: both;
+        }
+        #topleftSegment{
+            border-right: 2px solid rgb(110, 110, 110);
+            border-bottom: 2px solid rgb(110, 110, 110);
+            background-color: rgb(255, 255, 255);
+            float: left;
+            width: 350px;
+            height: 80px;
+            vertical-align: middle;
+        }
+        #topcenterSegment{
+            border-right: 2px solid rgb(110, 110, 110);
+            border-bottom: 2px solid rgb(110, 110, 110);
+            background-color: rgb(255, 255, 255);
+            float: left;
+            width: 350px;
+            height: 80px;
+        }
+        #toprightSegment{
+            background-color: rgb(255, 255, 255);
+            border-bottom: 2px solid rgb(110, 110, 110);
+            float: left;
+            width: 350px;
+            height: 80px;
+        }
+        #middleleftSegment{
+            border: 2px solid rgb(110, 110, 110);
+            background-color: rgb(255, 255, 255);
+            margin-right: 50px;
+            float: left;
+            padding-right: 90px;
+            padding-left: 90px;
+            padding-top: 170px;
+            padding-bottom: 170px;
+        }
+        #middlecenterSegment{
+            border: 2px solid rgb(110, 110, 110);
+            background-color: rgb(255, 255, 255);
+            float: left;
+            margin-right: 50px;
+            margin-left: 50px;
+            padding-right: 90px;
+            padding-left: 90px;
+            padding-top: 170px;
+            padding-bottom: 170px;
+        }
+        #middlerightSegment{
+            border: 2px solid rgb(110, 110, 110);
+            background-color: rgb(255, 255, 255);
+            float: left;
+            margin-left: 50px;
+            padding-right: 90px;
+            padding-left: 90px;
+            padding-top: 170px;
+            padding-bottom: 170px;
+        }
+        #bottomTop{
+            background-color: rgb(153, 153, 153);
+            padding-top: 25px;
+            padding-bottom: 25px;
+            border-bottom: 2px solid rgb(110, 110, 110);
+        }
+        #bottomBottom{
+            background-color: rgb(153, 153, 153);
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+        #leftMidLeft{
+            float: right;
+            padding-right: 20px;
+            border-right: 2px solid rgb(110, 110, 110);
+        }
+        #leftMidRight{
+            float: right;
+            padding-left: 20px;
+        }
+    </style>
+    <div id="container">
+        <header>
+            <div id="topPanel">
+                <div id="topleftSegment">
+                    <h3>Top Left</h3>
+                </div>
+                <div id="topcenterSegment">
+                    <h3>Top Middle</h3>
+                </div>
+                <div id="toprightSegment">
+                    <h3>Top Right</h3>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div id="middleleftSegment">
+                <div id="leftMidRight">
+                    right
+                </div>
+                <div id="leftMidLeft">
+                    left
+                </div>
+            </div>
+            <div id="middlecenterSegment">
+                middle middle
+            </div>
+            <div id="middlerightSegment">
+                middle right
+            </div>
+        </main>
+        <footer>
+            <div id="bottomPanel">
+                <div id="bottomTop">
+                    bottom top
+                </div>
+                <div id="bottomBottom">
+                    bottom bottom
+                </div>
+            </div>
+        </footer>
+
+    </div>
+</body>
+</html>

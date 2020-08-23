@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EngineFiles</title>
+</head>
+<body>
+    <link rel="stylesheet" href="/Users/lelacreutz/Desktop/JavaScript/Website/Game/platformer.css">
+    <div id="pageLeft">
+        <p id="homeLink"><a href="/Users/lelacreutz/Desktop/JavaScript/Website/HomePage/index.html"><button id="homeButton">Back To Home</button></a></p>
+        <p><input type="checkbox" id="showCollidersCheck" onclick="hitBoxChecked()">Show Hitboxes</p>
+        <p><div id="EntitiesAmount">EntitiesAmount</div></p>
+        <p><button onclick="reloadScene(SceneManager.activeScene)">Reload Scene</button></p>
+        <p><button onclick="saveScene()" id="saveScene">Save Scene</button></p>
+        <p><button onclick="clearTiles()" id="clearTiles">Clear Tiles</button></p>
+        <p><button onclick="updateTiles()" id="updateTiles">Update Tiles</button></p>
+        <p><input type="checkbox" id="autoTile" onclick="updateTiles()">Auto TileUpdate</p>
+        HasCollider:<p>
+        <p><input type="radio" name="colliderUse" id="yesCollider">True</p>
+        <p><input type="radio" name="colliderUse" id="noCollider">False</p>
+        Sorting Order<p><input type="number" min=-100 max=100 id="sortingOrder"></p>
+    </div>
+    <canvas width=800 height=500></canvas>
+    <div id="pageRight">
+        <p><button onclick="reloadScene(SceneManager.Scene1)">Load Scene1</button>
+        <button onclick="reloadScene(SceneManager.Scene2)">Load Scene2</button></p>
+        Select Tile:
+        <input type="radio" name="tile" id="grassTile">Grass
+        <input type="radio" name="tile" id="dirtTile">Dirt
+        <input type="radio" name="tile" id="woodTile">Wood
+        <input type="radio" name="tile" id="roundTile">Tile Test
+        <input type="radio" name="tile" id="eraser">Eraser
+    </div>
+    <script src="/Users/lelacreutz/Desktop/JavaScript/Website/CodeEngine/Classes/NonStatic/Component.js"></script>
+    <script src="/Users/lelacreutz/Desktop/JavaScript/Website/CodeEngine/Classes/NonStatic/Entity.js"></script>
+    <script src="/Users/lelacreutz/Desktop/JavaScript/Website/CodeEngine/Classes/NonStatic/Animation.js"></script>
+    <script src="/Users/lelacreutz/Desktop/JavaScript/Website/CodeEngine/ComponentScripts/PremadeComponents/Animator.js"></script>
+    <script src="/Users/lelacreutz/Desktop/JavaScript/Website/CodeEngine/ComponentScripts/PremadeComponents/Physics.js"></script>
+    <script src="/Users/lelacreutz/Desktop/JavaScript/Website/CodeEngine/ComponentScripts/PremadeComponents/Camera.js"></script>
+    <script src="/Users/lelacreutz/Desktop/JavaScript/Website/CodeEngine/ComponentScripts/PremadeComponents/RectangleCollider.js"></script>
+    <script src="/Users/lelacreutz/Desktop/JavaScript/Website/CodeEngine/ComponentScripts/PremadeComponents/Renderer.js"></script>
+    <script src="/Users/lelacreutz/Desktop/JavaScript/Website/CodeEngine/ComponentScripts/PremadeComponents/ImageRendererUI.js"></script>
+    <script src="/Users/lelacreutz/Desktop/JavaScript/Website/CodeEngine/ComponentScripts/PremadeComponents/TextRendererUI.js"></script>
+    <script src="/Users/lelacreutz/Desktop/JavaScript/Website/CodeEngine/Classes/Static/Time.js"></script>
+    <script src="/Users/lelacreutz/Desktop/JavaScript/Website/Game/HTMLController.js"></script>
+    <script src="/Users/lelacreutz/Desktop/JavaScript/Website/Game/SceneManager.js"></script>
+
+    <script src="/Users/lelacreutz/Desktop/JavaScript/Website/Game/Scripts/CameraEditorController.js"></script>
+    <script src="/Users/lelacreutz/Desktop/JavaScript/Website/Game/Scripts/PlayerController.js"></script>
+    <script src="/Users/lelacreutz/Desktop/JavaScript/Website/Game/Scripts/LevelController.js"></script>
+    <script src="/Users/lelacreutz/Desktop/JavaScript/Website/Game/Scripts/FPSUI.js"></script>
+    <script src="/Users/lelacreutz/Desktop/JavaScript/Website/Game/Scripts/MouseObject.js"></script>
+
+    <script src="/Users/lelacreutz/Desktop/JavaScript/Website/CodeEngine/CodeEngine.js"></script>
+    <script src="/Users/lelacreutz/Desktop/JavaScript/Website/CodeEngine/Classes/Static/InputClass.js"></script>
+</body>
+</html>
