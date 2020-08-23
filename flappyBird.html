@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird</title>
+</head>
+<body>
+    <style>
+        canvas{
+            background-color: rgb(133, 206, 255);
+            border: 3px solid black;
+        }
+        body{
+            background-color: gray;
+            text-align: center;
+        }
+        #homeLink{
+            position: relative;
+        }
+        #homeButton{
+            font-size: xx-large;
+            width: 400px;
+            height: 50px;
+            border: 2px solid black;
+        }
+    </style>
+        <p id="homeLink">
+            <a href="/Users/lelacreutz/Desktop/JavaScript/Website/HomePage/index.html"><button id="homeButton">Go back to home</button></a>
+        </p>
+    <canvas width=650 height=615></canvas>
+    <script src="Player.js"></script>
+    <script src="PipePair.js"></script>
+    <script src="Ground.js"></script>
+    <script src="FlapBird.js"></script>
+</body>
+</html>
