@@ -30,7 +30,7 @@ class Enemy1 extends Component{
         function shootBullet(thisThing){
             if(thisThing.gameObject.alive){
                 if(thisThing.playerPoint != 0){
-                    var myBullet = Instantiate(new GameObject("Enemy1Bullet", "invinsibleEnemy"), [new Renderer(0, "https://Seiji-Welsh.github.io/Shooter/images/bullet.png")
+                    var myBullet = Instantiate(new GameObject("Enemy1Bullet", "invinsibleEnemy"), [new Renderer(0, "https://Seiji-Welsh.github.io/images/bullet.png")
                     , new EnemyBullet(), new BoxCollider(10, 80, 0, 0), new ScrollingObject()], thisThing.gameObject.x - (thisThing.gameObject.scaleX / 2)
                     , thisThing.gameObject.y - Math.sin(degToRad(thisThing.gameObject.rotation)) * (thisThing.gameObject.scaleY / 2), 20, 8);
                     myBullet.rotation = thisThing.gameObject.rotation;

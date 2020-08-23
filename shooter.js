@@ -88,7 +88,7 @@ SpawnBullet();
 function SpawnBullet(){
     setInterval(function(){
         if(input.spacDwn){
-            Instantiate(new GameObject("Bullet", "weapon"), [new Renderer(0, "https://Seiji-Welsh.github.io/Shooter/images/bullet.png")
+            Instantiate(new GameObject("Bullet", "weapon"), [new Renderer(0, "https://Seiji-Welsh.github.io/images/bullet.png")
             , new Bullet(), new BoxCollider(20, 20, 0, 0)], player.x + (player.scaleX / 2)
             , (player.y + 3) + Math.sin(degToRad(player.rotation)) * (player.scaleY / 2), 20, 8);
         }
@@ -99,16 +99,16 @@ function LevelCreation(){
     var randNum = Math.round(Math.random() * 5);
     switch(randNum){
         case 0:
-            var asteroid = Instantiate(new GameObject("asteroid", "enemy"), [new Renderer(10, "https://Seiji-Welsh.github.io/Shooter/images/asteroid.png")
+            var asteroid = Instantiate(new GameObject("asteroid", "enemy"), [new Renderer(10, "https://Seiji-Welsh.github.io/images/asteroid.png")
             , new ScrollingObject(), new BoxCollider(50, 50, 0, 0), new Enemy(5, 2, 10)], canvas.width + 100, Math.random() * canvas.height, 160, 106.6);
             asteroid.rotation = Math.random() * 360;
             break;
         case 1:
-            Instantiate(new GameObject("enemy1", "enemy"), [new Renderer(5, "https://Seiji-Welsh.github.io/Shooter/images/enemy1.png")
+            Instantiate(new GameObject("enemy1", "enemy"), [new Renderer(5, "https://Seiji-Welsh.github.io/images/enemy1.png")
             , new ScrollingObject(), new BoxCollider(30, 20, 0, 0), new Enemy(10, 2, 100), new Enemy1()], canvas.width + 100, Math.random() * canvas.height, 80, 80);
             break;
         default:
-            var asteroid = Instantiate(new GameObject("asteroid", "enemy"), [new Renderer(10, "https://Seiji-Welsh.github.io/Shooter/images/asteroid.png")
+            var asteroid = Instantiate(new GameObject("asteroid", "enemy"), [new Renderer(10, "https://Seiji-Welsh.github.io/images/asteroid.png")
             , new ScrollingObject(), new BoxCollider(50, 50, 0, 0), new Enemy(5, 2, 10)], canvas.width + 100, Math.random() * canvas.height, 160, 106.6);
             asteroid.rotation = Math.random() * 360;
             break;
@@ -123,10 +123,10 @@ function sceneLoad(){
     for(var i = 1; i <= lenth; i++){
         Destroy(gameObjects[0]);
     }
-    var bg = Instantiate(new GameObject("BG", "background"), [new Renderer(-5, "https://Seiji-Welsh.github.io/Shooter/images/bg.png")]
+    var bg = Instantiate(new GameObject("BG", "background"), [new Renderer(-5, "https://Seiji-Welsh.github.io/images/bg.png")]
     , canvas.width / 2, canvas.height / 2, canvas.width, canvas.height);
     bg.GetComponent(Renderer).useAntialiasing = true;
-    player = Instantiate(new GameObject("Player", "player"), [new Renderer(1, "https://Seiji-Welsh.github.io/Shooter/images/ship.png")
+    player = Instantiate(new GameObject("Player", "player"), [new Renderer(1, "https://Seiji-Welsh.github.io/images/ship.png")
     , new Player(), new BoxCollider(50, 10, 0, 0)], 100, canvas.height / 2, 80, 80);
 }
 function vectorToAngle(vectX, vectY){
