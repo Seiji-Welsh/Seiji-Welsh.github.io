@@ -12,7 +12,7 @@ let ground2 = new Ground(ground1.width, canvas.height - 100, 539, 196);
 let ground3 = new Ground(ground1.width * 2, canvas.height - 100, 539, 196);
 let onFloor = false;
 let bg = new Image();
-bg.src = "/Users/lelacreutz/Desktop/JavaScript/Website/FlappyBird/Images/BG.png";
+bg.src = "https://Seiji-Welsh.github.io/FlappyBird/Images/BG.png";
 addEventListener("keydown", InputDown);
 canvas.addEventListener("mousedown", function(){
     onInputThing();
