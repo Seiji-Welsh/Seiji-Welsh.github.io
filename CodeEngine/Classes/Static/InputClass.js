@@ -154,9 +154,3 @@ class Input{
         "y" : canvas.height / 2
     }
 }
-addEventListener("keydown", Input.InputDown);
-addEventListener("keyup", Input.InputUp);
-canvas.addEventListener("wheel", Input.MouseWheel, {passive : false});
-canvas.addEventListener("mousemove", Input.MouseMove);
-canvas.addEventListener("mousedown", Input.MouseDown);
-addEventListener("mouseup", Input.MouseUp);

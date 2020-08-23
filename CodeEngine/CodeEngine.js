@@ -113,3 +113,9 @@ SceneManager.Load(SceneManager.Scene1);
 setTimeout(function(){
     Update();
 }, 200)
+addEventListener("keydown", Input.InputDown);
+addEventListener("keyup", Input.InputUp);
+canvas.addEventListener("wheel", Input.MouseWheel, {passive : false});
+canvas.addEventListener("mousemove", Input.MouseMove);
+canvas.addEventListener("mousedown", Input.MouseDown);
+addEventListener("mouseup", Input.MouseUp);
