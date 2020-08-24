@@ -109,7 +109,6 @@ function ScreenToWorldPoint(x, y){
     };
 }
 let mainCamera;
-SceneManager.Load(SceneManager.Scene1);
 setTimeout(function(){
     addEventListener("keydown", Input.InputDown);
     addEventListener("keyup", Input.InputUp);
@@ -117,5 +116,6 @@ setTimeout(function(){
     canvas.addEventListener("mousemove", Input.MouseMove);
     canvas.addEventListener("mousedown", Input.MouseDown);
     addEventListener("mouseup", Input.MouseUp);
+    SceneManager.Load(SceneManager.Scene1);
     Update();
 }, 200)

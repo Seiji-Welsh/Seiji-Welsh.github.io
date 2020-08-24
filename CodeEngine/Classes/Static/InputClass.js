@@ -150,7 +150,7 @@ class Input{
     static MouseScrollY = 0;
     static leftClick = false;
     static mousePosition = {
-        "x" : canvas.width / 2,
-        "y" : canvas.height / 2
+        "x" : 0,
+        "y" : 0
     }
 }
