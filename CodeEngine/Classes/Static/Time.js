@@ -23,14 +23,3 @@ class Time{
     static allCurrentTimeouts = [];
     static TimePerFrame = 0;
 }
-function test(){
-    Time.WaitAndRepeat(function(message){
-        console.log(message);
-    }, 300, 10, "BRUH")
-}
-addEventListener("keydown", Input.InputDown);
-addEventListener("keyup", Input.InputUp);
-canvas.addEventListener("wheel", Input.MouseWheel, {passive : false});
-canvas.addEventListener("mousemove", Input.MouseMove);
-canvas.addEventListener("mousedown", Input.MouseDown);
-addEventListener("mouseup", Input.MouseUp);
