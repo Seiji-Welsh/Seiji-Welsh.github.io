@@ -66,7 +66,6 @@ class Input{
                 Input.eDown = true;
                 break;
         }
-        Input.MouseScrollY = 0;
         Input.Horizontal = Input.arrows.right + Input.arrows.left;
         Input.Vertical = Input.arrows.up + Input.arrows.down;
         Input.wasd.Horizontal = Input.wasd.d + Input.wasd.a;
@@ -125,23 +124,19 @@ class Input{
         Input.Vertical = Input.arrows.up + Input.arrows.down;
         Input.wasd.Horizontal = Input.wasd.d + Input.wasd.a;
         Input.wasd.Vertical = Input.wasd.w + Input.wasd.s;
-        Input.MouseScrollY = 0;
     }
     static MouseWheel(evt){
         Input.MouseScrollY = -evt.deltaY;
         if(Math.abs(Input.MouseScrollY) == 1){
-            Input.MouseScrollY = 0;
         }
         evt.preventDefault();
     }
     static MouseMove(evt){
         let rect = canvas.getBoundingClientRect();
-        Input.MouseScrollY = 0;
         Input.mousePosition.x = evt.clientX - rect.left;
         Input.mousePosition.y = -((evt.clientY - rect.top) - canvas.height);;
     }
     static MouseDown(){
-        Input.MouseScrollY = 0;
         Input.mouseDown = true;
     }
     static MouseUp(){

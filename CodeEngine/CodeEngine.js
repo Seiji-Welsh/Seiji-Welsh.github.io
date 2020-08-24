@@ -50,6 +50,7 @@ function Update(){
         entities[i - 1].UIUpdate();
     }
     ctx.strokeStyle = "lime";
+    Input.MouseScrollY = 0;
 }
 function spawnEntity(entity, x, y, scaleX, scaleY, rotation){
     entities.push(entity);
