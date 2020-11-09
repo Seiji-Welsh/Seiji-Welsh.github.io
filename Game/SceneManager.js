@@ -116,44 +116,44 @@ class SceneManager{
                 switch(objName){
                     case "gd":
                         if(hasCollider){
-                            spawnEntity(new Entity("gd","ground",[new RectangleCollider(32,32,0,0), new Renderer(sortOrd,"file://https://seiji-welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideLeftUpRightDown.png",32,32,false)],"tile"),parseFloat(posX),parseFloat(posY),1,1,0)
+                            spawnEntity(new Entity("gd","ground",[new RectangleCollider(32,32,0,0), new Renderer(sortOrd,"https://seiji-welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideLeftUpRightDown.png",32,32,false)],"tile"),parseFloat(posX),parseFloat(posY),1,1,0)
                         }
                         else{
-                            spawnEntity(new Entity("gd","ground",[new Renderer(sortOrd,"file://https://seiji-welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideLeftUpRightDown.png",32,32,false)],"tile"),parseFloat(posX),parseFloat(posY),1,1,0)
+                            spawnEntity(new Entity("gd","ground",[new Renderer(sortOrd,"https://seiji-welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideLeftUpRightDown.png",32,32,false)],"tile"),parseFloat(posX),parseFloat(posY),1,1,0)
                         }
                         break;
                     case "wl":
                         if(hasCollider){
-                            spawnEntity(new Entity("wl","ground",[new RectangleCollider(32,32,0,0), new Renderer(sortOrd,"file://https://seiji-welsh.github.io/Game/Images/Tiles/Wall/Wall.png",32,32,false)],"tile"),parseFloat(posX),parseFloat(posY),1,1,0)
+                            spawnEntity(new Entity("wl","ground",[new RectangleCollider(32,32,0,0), new Renderer(sortOrd,"https://seiji-welsh.github.io/Game/Images/Tiles/Wall/Wall.png",32,32,false)],"tile"),parseFloat(posX),parseFloat(posY),1,1,0)
                         }
                         else{
-                            spawnEntity(new Entity("wl","ground",[new Renderer(sortOrd,"file://https://seiji-welsh.github.io/Game/Images/Tiles/Wall/Wall.png",32,32,false)],"tile"),parseFloat(posX),parseFloat(posY),1,1,0)
+                            spawnEntity(new Entity("wl","ground",[new Renderer(sortOrd,"https://seiji-welsh.github.io/Game/Images/Tiles/Wall/Wall.png",32,32,false)],"tile"),parseFloat(posX),parseFloat(posY),1,1,0)
                         }
                         break;
                     case "st":
                         if(hasCollider){
-                            spawnEntity(new Entity("st","ground",[new RectangleCollider(32,32,0,0), new Renderer(sortOrd,"file://https://seiji-welsh.github.io/Game/Images/Tiles/Stair.png",32,32,false)],"tile"),parseFloat(posX),parseFloat(posY),1,1,0)
+                            spawnEntity(new Entity("st","ground",[new RectangleCollider(32,32,0,0), new Renderer(sortOrd,"https://seiji-welsh.github.io/Game/Images/Tiles/Stair.png",32,32,false)],"tile"),parseFloat(posX),parseFloat(posY),1,1,0)
                         }
                         else{
-                            spawnEntity(new Entity("st","ground",[new Renderer(sortOrd,"file://https://seiji-welsh.github.io/Game/Images/Tiles/Stair.png",32,32,false)],"tile"),parseFloat(posX),parseFloat(posY),1,1,0)
+                            spawnEntity(new Entity("st","ground",[new Renderer(sortOrd,"https://seiji-welsh.github.io/Game/Images/Tiles/Stair.png",32,32,false)],"tile"),parseFloat(posX),parseFloat(posY),1,1,0)
                         }
                         break;
                     case "dr":
                         if(hasCollider){
-                            spawnEntity(new Entity("dr","ground",[new RectangleCollider(32,32,0,0), new Renderer(sortOrd,"file://https://seiji-welsh.github.io/Game/Images/Tiles/Door/DoorBottom.png",32,32,false)],"tile"),parseFloat(posX),parseFloat(posY),1,1,0)
-                            spawnEntity(new Entity("null","ground",[new RectangleCollider(32,32,0,0), new Renderer(sortOrd,"file://https://seiji-welsh.github.io/Game/Images/Tiles/Door/DoorTop.png",32,32,false)],"postTile"),parseFloat(posX),parseFloat(posY) + 32,1,1,0)
+                            spawnEntity(new Entity("dr","ground",[new RectangleCollider(32,32,0,0), new Renderer(sortOrd,"https://seiji-welsh.github.io/Game/Images/Tiles/Door/DoorBottom.png",32,32,false)],"tile"),parseFloat(posX),parseFloat(posY),1,1,0)
+                            spawnEntity(new Entity("null","ground",[new RectangleCollider(32,32,0,0), new Renderer(sortOrd,"https://seiji-welsh.github.io/Game/Images/Tiles/Door/DoorTop.png",32,32,false)],"postTile"),parseFloat(posX),parseFloat(posY) + 32,1,1,0)
                         }
                         else{
-                            spawnEntity(new Entity("dr","ground",[new Renderer(sortOrd,"file://https://seiji-welsh.github.io/Game/Images/Tiles/Door/DoorBottom.png",32,32,false)],"tile"),parseFloat(posX),parseFloat(posY),1,1,0)
-                            spawnEntity(new Entity("null","ground",[new Renderer(sortOrd,"file://https://seiji-welsh.github.io/Game/Images/Tiles/Door/DoorTop.png",32,32,false)],"postTile"),parseFloat(posX),parseFloat(posY) + 32,1,1,0)
+                            spawnEntity(new Entity("dr","ground",[new Renderer(sortOrd,"https://seiji-welsh.github.io/Game/Images/Tiles/Door/DoorBottom.png",32,32,false)],"tile"),parseFloat(posX),parseFloat(posY),1,1,0)
+                            spawnEntity(new Entity("null","ground",[new Renderer(sortOrd,"https://seiji-welsh.github.io/Game/Images/Tiles/Door/DoorTop.png",32,32,false)],"postTile"),parseFloat(posX),parseFloat(posY) + 32,1,1,0)
                         }
                         break;
                     case "bx":
                         if(hasCollider){
-                            spawnEntity(new Entity("bx","ground",[new RectangleCollider(32,32,0,0), new Renderer(sortOrd,"file://https://seiji-welsh.github.io/Game/Images/Tiles/Box.png",32,32,false)],"tile"),parseFloat(posX),parseFloat(posY),1,1,0)
+                            spawnEntity(new Entity("bx","ground",[new RectangleCollider(32,32,0,0), new Renderer(sortOrd,"https://seiji-welsh.github.io/Game/Images/Tiles/Box.png",32,32,false)],"tile"),parseFloat(posX),parseFloat(posY),1,1,0)
                         }
                         else{
-                            spawnEntity(new Entity("bx","ground",[new Renderer(sortOrd,"file://https://seiji-welsh.github.io/Game/Images/Tiles/Box.png",32,32,false)],"tile"),parseFloat(posX),parseFloat(posY),1,1,0)
+                            spawnEntity(new Entity("bx","ground",[new Renderer(sortOrd,"https://seiji-welsh.github.io/Game/Images/Tiles/Box.png",32,32,false)],"tile"),parseFloat(posX),parseFloat(posY),1,1,0)
                         }
                         break;
                     case "enm1":
