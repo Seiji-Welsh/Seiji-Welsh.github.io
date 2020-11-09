@@ -47,35 +47,35 @@ class MouseObject extends Component{
                 switch(selectedTile){
                     case "groundTile":
                         if(useColliders){
-                            objectSpawnee = spawnEntity(new Entity("gd", "ground", [new RectangleCollider(32, 32, 0, 0), new Renderer(sortOrderHTML.value, "seiji-welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideLeftUpRightDown.png", 32, 32, false)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
+                            objectSpawnee = spawnEntity(new Entity("gd", "ground", [new RectangleCollider(32, 32, 0, 0), new Renderer(sortOrderHTML.value, "https://seiji-welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideLeftUpRightDown.png", 32, 32, false)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
                         }
-                        else objectSpawnee = spawnEntity(new Entity("gd", "ground", [new Renderer(sortOrderHTML.value, "seiji-welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideLeftUpRightDown.png", 32, 32, false)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
+                        else objectSpawnee = spawnEntity(new Entity("gd", "ground", [new Renderer(sortOrderHTML.value, "https://seiji-welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideLeftUpRightDown.png", 32, 32, false)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
                         if(autoTile.checked)
                         updateTiles(objectSpawnee, undefined, objectSpawnee.order - 1);
                         break;
                     case "wallTile":
                         if(useColliders){
-                            objectSpawnee = spawnEntity(new Entity("wl", "ground", [new RectangleCollider(32, 32, 0, 0), new Renderer(sortOrderHTML.value, "seiji-welsh.github.io/Game/Images/Tiles/Wall/Wall.png", 32, 32, false)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
+                            objectSpawnee = spawnEntity(new Entity("wl", "ground", [new RectangleCollider(32, 32, 0, 0), new Renderer(sortOrderHTML.value, "https://seiji-welsh.github.io/Game/Images/Tiles/Wall/Wall.png", 32, 32, false)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
                         }
-                        else objectSpawnee = spawnEntity(new Entity("wl", "ground", [new Renderer(sortOrderHTML.value, "seiji-welsh.github.io/Game/Images/Tiles/Wall/Wall.png", 32, 32, false)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
+                        else objectSpawnee = spawnEntity(new Entity("wl", "ground", [new Renderer(sortOrderHTML.value, "https://seiji-welsh.github.io/Game/Images/Tiles/Wall/Wall.png", 32, 32, false)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
                         break;
                     case "stairTile":
                         if(useColliders){
-                            objectSpawnee = spawnEntity(new Entity("st", "ground", [new RectangleCollider(32, 32, 0, 0), new Renderer(sortOrderHTML.value, "seiji-welsh.github.io/Game/Images/Tiles/Stair.png", 32, 32, false)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
+                            objectSpawnee = spawnEntity(new Entity("st", "ground", [new RectangleCollider(32, 32, 0, 0), new Renderer(sortOrderHTML.value, "https://seiji-welsh.github.io/Game/Images/Tiles/Stair.png", 32, 32, false)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
                         }
-                        else objectSpawnee = spawnEntity(new Entity("st", "ground", [new Renderer(sortOrderHTML.value, "seiji-welsh.github.io/Game/Images/Tiles/Stair.png", 32, 32, false)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
+                        else objectSpawnee = spawnEntity(new Entity("st", "ground", [new Renderer(sortOrderHTML.value, "https://seiji-welsh.github.io/Game/Images/Tiles/Stair.png", 32, 32, false)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
                         break;
                     case "doorTile":
                         if(useColliders){
-                            objectSpawnee = spawnEntity(new Entity("dr", "ground", [new RectangleCollider(32, 32, 0, 0), new Renderer(sortOrderHTML.value, "seiji-welsh.github.io/Game/Images/Tiles/Door/DoorBottom.png", 32, 32, false)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
+                            objectSpawnee = spawnEntity(new Entity("dr", "ground", [new RectangleCollider(32, 32, 0, 0), new Renderer(sortOrderHTML.value, "https://seiji-welsh.github.io/Game/Images/Tiles/Door/DoorBottom.png", 32, 32, false)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
                         }
-                        else objectSpawnee = spawnEntity(new Entity("dr", "ground", [new Renderer(sortOrderHTML.value, "seiji-welsh.github.io/Game/Images/Tiles/Door/DoorBottom.png", 32, 32, false)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
+                        else objectSpawnee = spawnEntity(new Entity("dr", "ground", [new Renderer(sortOrderHTML.value, "https://seiji-welsh.github.io/Game/Images/Tiles/Door/DoorBottom.png", 32, 32, false)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
                         break;
                     case "boxTile":
                         if(useColliders){
-                            objectSpawnee = spawnEntity(new Entity("bx", "ground", [new RectangleCollider(32, 32, 0, 0), new Renderer(sortOrderHTML.value, "seiji-welsh.github.io/Game/Images/Tiles/Box.png", 32, 32, false)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
+                            objectSpawnee = spawnEntity(new Entity("bx", "ground", [new RectangleCollider(32, 32, 0, 0), new Renderer(sortOrderHTML.value, "https://seiji-welsh.github.io/Game/Images/Tiles/Box.png", 32, 32, false)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
                         }
-                        else objectSpawnee = spawnEntity(new Entity("bx", "ground", [new Renderer(sortOrderHTML.value, "seiji-welsh.github.io/Game/Images/Tiles/Box.png", 32, 32, false)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
+                        else objectSpawnee = spawnEntity(new Entity("bx", "ground", [new Renderer(sortOrderHTML.value, "https://seiji-welsh.github.io/Game/Images/Tiles/Box.png", 32, 32, false)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
                         break;
                     case "enemy1Tile":
                         sortOrderHTML.value = 0;

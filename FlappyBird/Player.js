@@ -10,7 +10,7 @@ class Player{
         this.scaleY = height;
         this.angle = 0;
         this.sprite = new Image();
-        this.sprite.src = "seiji-welsh.github.io/FlappyBird/Images/bird.png";
+        this.sprite.src = "https://seiji-welsh.github.io/FlappyBird/Images/bird.png";
         this.rotSpeed = 10;
     }
     Update(){

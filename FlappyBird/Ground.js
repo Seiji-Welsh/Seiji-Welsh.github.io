@@ -5,7 +5,7 @@ class Ground{
         this.width = width;
         this.height = height;
         this.sprite = new Image();
-        this.sprite.src = "seiji-welsh.github.io/FlappyBird/Images/ground.png";
+        this.sprite.src = "https://seiji-welsh.github.io/FlappyBird/Images/ground.png";
     }
     Update(){
         this.x -= panSpeed;

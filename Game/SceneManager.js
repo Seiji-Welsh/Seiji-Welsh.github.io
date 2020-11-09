@@ -61,7 +61,7 @@ class SceneManager{
         SceneManager.ScenePreset();
     }
     static ScenePreset(){
-        spawnEntity(new Entity("MouseObject", "ForeGround", [new MouseObject(), new Renderer(1000, "seiji-welsh.github.io/Game/Images/Tiles/Outline.png", 32, 32, false)]), 0, 0, 1, 1, 0)
+        spawnEntity(new Entity("MouseObject", "ForeGround", [new MouseObject(), new Renderer(1000, "https://seiji-welsh.github.io/Game/Images/Tiles/Outline.png", 32, 32, false)]), 0, 0, 1, 1, 0)
         spawnEntity(new Entity("FPSUI", "UI", [new TextRendererUI("FPS: " + Math.round(randomRange(45, 52)), "left", "40px Calibri", "rgb(40, 40, 40)"), new FPSUI()]), 10, 30, 1, 1, 0);
         spawnEntity(new Entity("PlayerPosUI", "UI", [new TextRendererUI("Player Position: 0, 0", "right", "40px Calibri", "rgb(40, 40, 40)"), new PlayerPositionUI()]), canvas.width - 10, canvas.height - 50, 1, 1, 0);
         spawnEntity(new Entity("PlayerHealthUI", "UI", [new TextRendererUI("Health: 5", "left", "40px Calibri", "rgb(40, 40, 40)"), new PlayerHealthUI()]), 10, canvas.height - 50, 1, 1, 0);
@@ -116,44 +116,44 @@ class SceneManager{
                 switch(objName){
                     case "gd":
                         if(hasCollider){
-                            spawnEntity(new Entity("gd","ground",[new RectangleCollider(32,32,0,0), new Renderer(sortOrd,"file://seiji-welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideLeftUpRightDown.png",32,32,false)],"tile"),parseFloat(posX),parseFloat(posY),1,1,0)
+                            spawnEntity(new Entity("gd","ground",[new RectangleCollider(32,32,0,0), new Renderer(sortOrd,"file://https://seiji-welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideLeftUpRightDown.png",32,32,false)],"tile"),parseFloat(posX),parseFloat(posY),1,1,0)
                         }
                         else{
-                            spawnEntity(new Entity("gd","ground",[new Renderer(sortOrd,"file://seiji-welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideLeftUpRightDown.png",32,32,false)],"tile"),parseFloat(posX),parseFloat(posY),1,1,0)
+                            spawnEntity(new Entity("gd","ground",[new Renderer(sortOrd,"file://https://seiji-welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideLeftUpRightDown.png",32,32,false)],"tile"),parseFloat(posX),parseFloat(posY),1,1,0)
                         }
                         break;
                     case "wl":
                         if(hasCollider){
-                            spawnEntity(new Entity("wl","ground",[new RectangleCollider(32,32,0,0), new Renderer(sortOrd,"file://seiji-welsh.github.io/Game/Images/Tiles/Wall/Wall.png",32,32,false)],"tile"),parseFloat(posX),parseFloat(posY),1,1,0)
+                            spawnEntity(new Entity("wl","ground",[new RectangleCollider(32,32,0,0), new Renderer(sortOrd,"file://https://seiji-welsh.github.io/Game/Images/Tiles/Wall/Wall.png",32,32,false)],"tile"),parseFloat(posX),parseFloat(posY),1,1,0)
                         }
                         else{
-                            spawnEntity(new Entity("wl","ground",[new Renderer(sortOrd,"file://seiji-welsh.github.io/Game/Images/Tiles/Wall/Wall.png",32,32,false)],"tile"),parseFloat(posX),parseFloat(posY),1,1,0)
+                            spawnEntity(new Entity("wl","ground",[new Renderer(sortOrd,"file://https://seiji-welsh.github.io/Game/Images/Tiles/Wall/Wall.png",32,32,false)],"tile"),parseFloat(posX),parseFloat(posY),1,1,0)
                         }
                         break;
                     case "st":
                         if(hasCollider){
-                            spawnEntity(new Entity("st","ground",[new RectangleCollider(32,32,0,0), new Renderer(sortOrd,"file://seiji-welsh.github.io/Game/Images/Tiles/Stair.png",32,32,false)],"tile"),parseFloat(posX),parseFloat(posY),1,1,0)
+                            spawnEntity(new Entity("st","ground",[new RectangleCollider(32,32,0,0), new Renderer(sortOrd,"file://https://seiji-welsh.github.io/Game/Images/Tiles/Stair.png",32,32,false)],"tile"),parseFloat(posX),parseFloat(posY),1,1,0)
                         }
                         else{
-                            spawnEntity(new Entity("st","ground",[new Renderer(sortOrd,"file://seiji-welsh.github.io/Game/Images/Tiles/Stair.png",32,32,false)],"tile"),parseFloat(posX),parseFloat(posY),1,1,0)
+                            spawnEntity(new Entity("st","ground",[new Renderer(sortOrd,"file://https://seiji-welsh.github.io/Game/Images/Tiles/Stair.png",32,32,false)],"tile"),parseFloat(posX),parseFloat(posY),1,1,0)
                         }
                         break;
                     case "dr":
                         if(hasCollider){
-                            spawnEntity(new Entity("dr","ground",[new RectangleCollider(32,32,0,0), new Renderer(sortOrd,"file://seiji-welsh.github.io/Game/Images/Tiles/Door/DoorBottom.png",32,32,false)],"tile"),parseFloat(posX),parseFloat(posY),1,1,0)
-                            spawnEntity(new Entity("null","ground",[new RectangleCollider(32,32,0,0), new Renderer(sortOrd,"file://seiji-welsh.github.io/Game/Images/Tiles/Door/DoorTop.png",32,32,false)],"postTile"),parseFloat(posX),parseFloat(posY) + 32,1,1,0)
+                            spawnEntity(new Entity("dr","ground",[new RectangleCollider(32,32,0,0), new Renderer(sortOrd,"file://https://seiji-welsh.github.io/Game/Images/Tiles/Door/DoorBottom.png",32,32,false)],"tile"),parseFloat(posX),parseFloat(posY),1,1,0)
+                            spawnEntity(new Entity("null","ground",[new RectangleCollider(32,32,0,0), new Renderer(sortOrd,"file://https://seiji-welsh.github.io/Game/Images/Tiles/Door/DoorTop.png",32,32,false)],"postTile"),parseFloat(posX),parseFloat(posY) + 32,1,1,0)
                         }
                         else{
-                            spawnEntity(new Entity("dr","ground",[new Renderer(sortOrd,"file://seiji-welsh.github.io/Game/Images/Tiles/Door/DoorBottom.png",32,32,false)],"tile"),parseFloat(posX),parseFloat(posY),1,1,0)
-                            spawnEntity(new Entity("null","ground",[new Renderer(sortOrd,"file://seiji-welsh.github.io/Game/Images/Tiles/Door/DoorTop.png",32,32,false)],"postTile"),parseFloat(posX),parseFloat(posY) + 32,1,1,0)
+                            spawnEntity(new Entity("dr","ground",[new Renderer(sortOrd,"file://https://seiji-welsh.github.io/Game/Images/Tiles/Door/DoorBottom.png",32,32,false)],"tile"),parseFloat(posX),parseFloat(posY),1,1,0)
+                            spawnEntity(new Entity("null","ground",[new Renderer(sortOrd,"file://https://seiji-welsh.github.io/Game/Images/Tiles/Door/DoorTop.png",32,32,false)],"postTile"),parseFloat(posX),parseFloat(posY) + 32,1,1,0)
                         }
                         break;
                     case "bx":
                         if(hasCollider){
-                            spawnEntity(new Entity("bx","ground",[new RectangleCollider(32,32,0,0), new Renderer(sortOrd,"file://seiji-welsh.github.io/Game/Images/Tiles/Box.png",32,32,false)],"tile"),parseFloat(posX),parseFloat(posY),1,1,0)
+                            spawnEntity(new Entity("bx","ground",[new RectangleCollider(32,32,0,0), new Renderer(sortOrd,"file://https://seiji-welsh.github.io/Game/Images/Tiles/Box.png",32,32,false)],"tile"),parseFloat(posX),parseFloat(posY),1,1,0)
                         }
                         else{
-                            spawnEntity(new Entity("bx","ground",[new Renderer(sortOrd,"file://seiji-welsh.github.io/Game/Images/Tiles/Box.png",32,32,false)],"tile"),parseFloat(posX),parseFloat(posY),1,1,0)
+                            spawnEntity(new Entity("bx","ground",[new Renderer(sortOrd,"file://https://seiji-welsh.github.io/Game/Images/Tiles/Box.png",32,32,false)],"tile"),parseFloat(posX),parseFloat(posY),1,1,0)
                         }
                         break;
                     case "enm1":
@@ -182,10 +182,10 @@ class SceneManager{
     }
     static enemy1(hascollider, posX, posY){
         if(hascollider){
-            return spawnEntity(new Entity("enm1", "Enemy", [new Enemy(), new Enemy1AI(), new Physics(1, 1.1, 1.05, 1, 1), new RectangleCollider(16, 16, 0, 0), new Renderer(0, "seiji-welsh.github.io/Game/Images/Animations/Enemy1/Enemy1Default.png", 128, 128, true), new Animator([
+            return spawnEntity(new Entity("enm1", "Enemy", [new Enemy(), new Enemy1AI(), new Physics(1, 1.1, 1.05, 1, 1), new RectangleCollider(16, 16, 0, 0), new Renderer(0, "https://seiji-welsh.github.io/Game/Images/Animations/Enemy1/Enemy1Default.png", 128, 128, true), new Animator([
                 new myAnimation("Run", randomRange(3, 10), [
-                  "seiji-welsh.github.io/Game/Images/Animations/Enemy1/Enemy1Default.png"
-                  , "seiji-welsh.github.io/Game/Images/Animations/Enemy1/Enemy1Run1.png"  
+                  "https://seiji-welsh.github.io/Game/Images/Animations/Enemy1/Enemy1Default.png"
+                  , "https://seiji-welsh.github.io/Game/Images/Animations/Enemy1/Enemy1Run1.png"  
                 ])
             ], "Run")], "tile", "denySmoothing"), posX, posY, 1, 1, 0);
         }
@@ -195,39 +195,39 @@ class SceneManager{
     }
     static ThePlayer(x, y){
         thePlayer = spawnEntity(new Entity("Player", "Player", [new PlayerController(), new Physics(1, 1.5, 1.05, 1, 1), new PlayerHealthSystem(), new RectangleCollider(16, 16, 0, 0), new Renderer(.5,"",32,32,false)]), x, y, 1, 1, 0);
-        spawnEntity(new Entity("PlayerRenderer", "none", [new Renderer(.5, "seiji-welsh.github.io/Game/Images/Animations/Player/PlayerDefault.png", 128, 128, true), new RelativePosition(thePlayer, 0, -8), new Animator([
+        spawnEntity(new Entity("PlayerRenderer", "none", [new Renderer(.5, "https://seiji-welsh.github.io/Game/Images/Animations/Player/PlayerDefault.png", 128, 128, true), new RelativePosition(thePlayer, 0, -8), new Animator([
             new myAnimation("Idle", 4, [
-                "seiji-welsh.github.io/Game/Images/Animations/Player/PlayerDefault.png",
-                "seiji-welsh.github.io/Game/Images/Animations/Player/PlayerIdle2.png"
+                "https://seiji-welsh.github.io/Game/Images/Animations/Player/PlayerDefault.png",
+                "https://seiji-welsh.github.io/Game/Images/Animations/Player/PlayerIdle2.png"
             ]),
             new myAnimation("Run", 12, [
-                "seiji-welsh.github.io/Game/Images/Animations/Player/PlayerRun1.png",
-                "seiji-welsh.github.io/Game/Images/Animations/Player/PlayerRun2.png",
-                "seiji-welsh.github.io/Game/Images/Animations/Player/PlayerRun1.png",
-                "seiji-welsh.github.io/Game/Images/Animations/Player/PlayerDefault.png"
+                "https://seiji-welsh.github.io/Game/Images/Animations/Player/PlayerRun1.png",
+                "https://seiji-welsh.github.io/Game/Images/Animations/Player/PlayerRun2.png",
+                "https://seiji-welsh.github.io/Game/Images/Animations/Player/PlayerRun1.png",
+                "https://seiji-welsh.github.io/Game/Images/Animations/Player/PlayerDefault.png"
             ]),
             new myAnimation("Jump", 10, [
-                "seiji-welsh.github.io/Game/Images/Animations/Player/PlayerJump1.png"
+                "https://seiji-welsh.github.io/Game/Images/Animations/Player/PlayerJump1.png"
             ])
         ], "Idle"), new PlayerAnimation()]), x, y, 1, 1, 0);
     }
     static LightTile(x, y, sortOrd, useCol){
         if(useCol)
-        return spawnEntity(new Entity("lt","ground",[new RectangleCollider(32,32,0,0), new Renderer(sortOrd,"seiji-welsh.github.io/Game/Images/Tiles/Light.png",32,32,false)],"tile"),x,y,1,1,0)
+        return spawnEntity(new Entity("lt","ground",[new RectangleCollider(32,32,0,0), new Renderer(sortOrd,"https://seiji-welsh.github.io/Game/Images/Tiles/Light.png",32,32,false)],"tile"),x,y,1,1,0)
         else
-        return spawnEntity(new Entity("lt","ground",[new Renderer(sortOrd,"seiji-welsh.github.io/Game/Images/Tiles/Light.png",32,32,false)],"tile"),x,y,1,1,0)
+        return spawnEntity(new Entity("lt","ground",[new Renderer(sortOrd,"https://seiji-welsh.github.io/Game/Images/Tiles/Light.png",32,32,false)],"tile"),x,y,1,1,0)
     }
     static ChainTile(x, y, sortOrd, useCol){
         if(useCol)
-        return spawnEntity(new Entity("chn","ground",[new RectangleCollider(32,32,0,0), new Renderer(sortOrd,"seiji-welsh.github.io/Game/Images/Tiles/Chain.png",32,32,false)],"tile"),x,y,1,1,0)
+        return spawnEntity(new Entity("chn","ground",[new RectangleCollider(32,32,0,0), new Renderer(sortOrd,"https://seiji-welsh.github.io/Game/Images/Tiles/Chain.png",32,32,false)],"tile"),x,y,1,1,0)
         else
-        return spawnEntity(new Entity("chn","ground",[new Renderer(sortOrd,"seiji-welsh.github.io/Game/Images/Tiles/Chain.png",32,32,false)],"tile"),x,y,1,1,0)
+        return spawnEntity(new Entity("chn","ground",[new Renderer(sortOrd,"https://seiji-welsh.github.io/Game/Images/Tiles/Chain.png",32,32,false)],"tile"),x,y,1,1,0)
 
     }
     static SpikeTile(x, y, sortOrd, useCol){
         if(useCol)
-        return spawnEntity(new Entity("sp","ground",[new RectangleCollider(32,32,0,0), new Renderer(sortOrd,"seiji-welsh.github.io/Game/Images/Tiles/Spike.png",32,32,false)],"tile", "denySmoothing"),x,y,1,1,0)
+        return spawnEntity(new Entity("sp","ground",[new RectangleCollider(32,32,0,0), new Renderer(sortOrd,"https://seiji-welsh.github.io/Game/Images/Tiles/Spike.png",32,32,false)],"tile", "denySmoothing"),x,y,1,1,0)
         else
-        return spawnEntity(new Entity("sp","ground",[new Renderer(sortOrd,"seiji-welsh.github.io/Game/Images/Tiles/Spike.png",32,32,false)],"tile", "denySmoothing"),x,y,1,1,0)
+        return spawnEntity(new Entity("sp","ground",[new Renderer(sortOrd,"https://seiji-welsh.github.io/Game/Images/Tiles/Spike.png",32,32,false)],"tile", "denySmoothing"),x,y,1,1,0)
     }
 }
