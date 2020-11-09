@@ -4,7 +4,7 @@ class Player extends Component{
         this.xv = 0;
         this.yv = 0;
         this.drag = .9;
-        this.speed = .5;
+        this.speed = .6;
     }
     update(){
         this.gameObject.x += this.xv;
@@ -21,7 +21,7 @@ class Player extends Component{
     }
     collisionUpdate(collider){
         if(collider.gameObject.tag == "enemy" || collider.gameObject.tag == "invinsibleEnemy"){
-            sceneLoad();
+            //sceneLoad();
         }
     }
 }

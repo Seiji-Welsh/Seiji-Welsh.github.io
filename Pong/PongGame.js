@@ -52,7 +52,7 @@ class Board{
 }
 addEventListener("mousemove", mouseEvent);
 c.fillStyle = "white";
-var FPS = 30;
+var FPS = 50;
 var scale = 10;
 var rackWidth = 20;
 var rackHeight = 90;

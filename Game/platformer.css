@@ -1,17 +1,39 @@
-canvas{
-    background-color: rgb(104, 174, 255);
-    border: 3px solid black;
-    float: left;
-}
-body{
-    background-color: gray;
-}
 #pageLeft{
-    font: 13px Calibri;
     float: left;
+    height: 600px;
+    border: 2px solid black;
+    width: 200px;
+    overflow: auto;
+    background-color: rgb(179, 162, 162);
+    /*background-image: linear-gradient(to bottom, rgb(80, 80, 88), rgb(177, 176, 214));*/
+    text-align: center;
 }
 #pageRight{
-    font: 13px Calibri;
-    clear: both;
-    margin-left: 100px;
+    text-align: left;
+}
+canvas{
+    background-color: rgb(148, 203, 255);
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    cursor: crosshair;
+    background-image: linear-gradient(to right, rgb(68, 149, 255), rgb(146, 184, 255), rgb(146, 184, 255), rgb(68, 149, 255));
+}
+.pageLeftSection{
+    border-bottom: 2px solid black;
+}
+body{
+    background-color: rgb(68, 58, 58);
+    /*background-image: linear-gradient(to right, rgb(55, 0, 255), rgb(143, 182, 255), rgb(143, 182, 255), rgb(55, 0, 255));*/
+}
+.leftPageBackground{
+    background-color: rgba(255, 0, 0, 0.3);
+}
+.levelText{
+    width: 150px;
+    height: 100px;
+    font: 9px Arial;
+}
+#tileRadios{
+    font: 10px Arial;
 }

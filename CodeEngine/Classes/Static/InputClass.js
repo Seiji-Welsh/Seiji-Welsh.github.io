@@ -7,6 +7,9 @@ class Input{
     static bDown = false;
     static mouseDown = false;
     static eDown = false;
+    static CommandDown = false;
+    static pDown = false;
+    static oneDown = false;
     static arrows = {
         "left" : 0,
         "up" : 0,
@@ -22,54 +25,71 @@ class Input{
         "Vertical" : 0
     }
     static InputDown(evt){
-        switch(evt.keyCode){
-            //arrows
-            case 37:
-                Input.arrows.left = -1;
-                break;
-            case 38:
-                Input.arrows.up = 1;
-                break;
-            case 39:
-                Input.arrows.right = 1;
-                break;
-            case 40:
-                Input.arrows.down = -1;
-                break;
-            //wasd
-            case 65:
-                Input.wasd.a = -1;
-                break;
-            case 87:
-                Input.wasd.w = 1;
-                break;
-            case 68:
-                Input.wasd.d = 1;
-                break;
-            case 83:
-                Input.wasd.s = -1;
-                break;
-            //Other Inputs
-            case 32:
-                Input.spaceDown = true;
-                break;
-            case 187:
-                Input.plusDown = true;
-                break;
-            case 189:
-                Input.minusDown = true;
-                break;
-            case 66:
-                Input.bDown = true;
-                break;
-            case 69:
-                Input.eDown = true;
-                break;
+        if(evt.keyCode == 91){
+            Input.CommandDown = true;
+        }
+        if(!Input.CommandDown){
+            switch(evt.keyCode){
+                //arrows
+                case 37:
+                    Input.arrows.left = -1;
+                    break;
+                case 38:
+                    Input.arrows.up = 1;
+                    break;
+                case 39:
+                    Input.arrows.right = 1;
+                    break;
+                case 40:
+                    Input.arrows.down = -1;
+                    break;
+                //wasd
+                case 65:
+                    Input.wasd.a = -1;
+                    break;
+                case 87:
+                    Input.wasd.w = 1;
+                    break;
+                case 68:
+                    Input.wasd.d = 1;
+                    break;
+                case 83:
+                    Input.wasd.s = -1;
+                    break;
+                //Other Inputs
+                case 32:
+                    Input.spaceDown = true;
+                    break;
+                case 187:
+                    Input.plusDown = true;
+                    break;
+                case 189:
+                    Input.minusDown = true;
+                    break;
+                case 66:
+                    Input.bDown = true;
+                    break;
+                case 69:
+                    Input.eDown = true;
+                    break;
+                case 27:
+                    if(fullScreenOn)
+                    toggleFullScreen();
+                    break;
+                case 80:
+                    Input.pDown = true;
+                    break;
+                case 49:
+                    Input.oneDown = true;
+                    break;
+            }
         }
         Input.Horizontal = Input.arrows.right + Input.arrows.left;
         Input.Vertical = Input.arrows.up + Input.arrows.down;
         Input.wasd.Horizontal = Input.wasd.d + Input.wasd.a;
         Input.wasd.Vertical = Input.wasd.w + Input.wasd.s;
+        if(!Input.CommandDown)
+        evt.preventDefault();
     }
     static InputUp(evt){
         switch(evt.keyCode){
@@ -115,10 +135,16 @@ class Input{
             case 69:
                 Input.eDown = false;
                 break;
-            //Only Up Inputs
-            case 80:
-                console.log(entities);
+            case 91:
+                Input.CommandDown = false;
                 break;
+            case 80:
+                Input.pDown = false;
+                break;
+            case 49:
+                Input.oneDown = false;
+                break;
+            //Only Up Inputs
         }
         Input.Horizontal = Input.arrows.right + Input.arrows.left;
         Input.Vertical = Input.arrows.up + Input.arrows.down;
@@ -127,8 +153,6 @@ class Input{
     }
     static MouseWheel(evt){
         Input.MouseScrollY = -evt.deltaY;
-        if(Math.abs(Input.MouseScrollY) == 1){
-        }
         evt.preventDefault();
     }
     static MouseMove(evt){

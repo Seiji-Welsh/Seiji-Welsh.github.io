@@ -1,3 +1,101 @@
+/*class Segment{
+    constructor(x, y){
+        this.x = x;
+        this.y = y; 
+    }
+    frame(){
+        if(this.x == x && this.y == y){
+            reload();
+        }
+        if(this.x == ax && this.y == ay){
+            aset();
+        }
+        drawOrigin(this.x, this.y, "green");
+    }
+}
+let canvas = document.querySelector("canvas");
+let c = canvas.getContext("2d");
+function sleep(timeout) {
+    return new Promise(resolve => setTimeout(resolve, timeout));
+}
+let FPS = 20;
+let data = [];
+let cellSize = 15;
+canvas.width = Math.round(canvas.width / cellSize) * cellSize;
+canvas.height = Math.round(canvas.height / cellSize) * cellSize;
+let gridWidth = canvas.width / cellSize;
+let gridHeight = canvas.height / cellSize;
+let x;
+let y;
+let ax;
+let ay;
+function aset(){
+    ax = Math.round(Math.random() * (gridWidth - 1));
+    ay = Math.round(Math.random() * (gridHeight - 1));
+}
+let xv
+let yv;
+let l = 1;
+reload();
+function frame(){
+    c.clearRect(0, 0, canvas.width, canvas.height);
+    data.push(new Segment(x, y));
+    if(data.length >= l){
+        data.shift();
+    }
+    x += xv;
+    y += yv;
+    drawOrigin(ax, ay, "red");
+    for(let i = 0; i < data.length; i++){
+        data[i].frame();
+    }
+    drawOrigin(x, y, "green");
+    if(x == ax && y == ay){
+        l += 5;
+        aset();
+    }
+    if(x >= gridWidth || x < 0 || y >= gridHeight || y < 0){
+        reload();
+    }
+}
+function reload(){
+    xv = 0; yv = 0;
+    x = 2; y = Math.round(gridHeight / 2);
+    aset();
+    l = 1;
+    data = [];
+}
+async function frameCaller(){
+    for(;;){
+        frame();
+        await sleep(1000 / FPS);
+    }
+}
+function drawOrigin(gx, gy, color){
+    c.fillStyle = color;
+    c.fillRect(gx * cellSize, gy * cellSize, cellSize, cellSize)
+}
+addEventListener("keydown", keyPush);
+function keyPush(e){
+    switch(e.keyCode){
+        case 37:
+            xv = -1; yv = 0;
+            break;
+        case 38:
+            xv = 0; yv = -1;
+            break;
+        case 39:
+            xv = 1; yv = 0;
+            break;
+        case 40:
+            xv = 0; yv = 1;
+            break;
+        case 32:
+            l += 10;
+            break;
+    }
+}
+frameCaller();*/
 var canvas = document.querySelector('canvas');
 var c = canvas.getContext('2d');
 class Segment{
@@ -56,7 +154,7 @@ var posY = 5;
 var lenPerAp = 3;
 var segments = [];
 var app = new Apple();
-setInterval(update, 60);
+setInterval(update, 50);
 update();
 function update(){
     xv = fxv; yv = fyv;
