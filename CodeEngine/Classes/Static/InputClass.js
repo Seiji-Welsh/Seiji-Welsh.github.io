@@ -88,8 +88,6 @@ class Input{
         Input.Vertical = Input.arrows.up + Input.arrows.down;
         Input.wasd.Horizontal = Input.wasd.d + Input.wasd.a;
         Input.wasd.Vertical = Input.wasd.w + Input.wasd.s;
-        if(!Input.CommandDown)
-        evt.preventDefault();
     }
     static InputUp(evt){
         switch(evt.keyCode){
