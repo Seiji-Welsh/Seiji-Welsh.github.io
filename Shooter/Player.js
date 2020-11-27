@@ -21,7 +21,7 @@ class Player extends Component{
     }
     collisionUpdate(collider){
         if(collider.gameObject.tag == "enemy" || collider.gameObject.tag == "invinsibleEnemy"){
-            sceneLoad();
+            //sceneLoad();
         }
     }
 }

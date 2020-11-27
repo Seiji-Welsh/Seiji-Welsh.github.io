@@ -9,12 +9,14 @@
 <body>
     <div id="container">
         <div id="pageLeft">
-            <div id="homeLink"><a href="https://seiji-welsh.github.io/index.html"><button id="homeButton" style="width: 200px; height: 50px;">Back To Home</button></a></div>
+            <div id="homeLink"><a href="https://seiji-welsh.github.io/HomePage/index.html"><button id="homeButton" style="width: 200px; height: 50px;">Back To Home</button></a></div>
             <button onclick="toggleFullScreen()">FullScreen</button>
             <div id="accessibilitySection" class="pageLeftSection">
                 <div class="leftPageBackground">
                     <p><input type="checkbox" id="showCollidersCheck" onclick="hitBoxChecked()">Show Hitboxes</p>
                     <p><div id="EntitiesAmount">0 Objects</div></p>
+                    <p>Max FPS <input type="number" min=1 max=200 id="maxFPS" value=60></p>
+                    <p>Max RenderFPS <input type="number" min=1 max=60 id="maxRenderFPS" value=60></p>
                 </div>
             </div>
             <div><button onclick="reloadScene(SceneManager.activeScene)" style="width: 200px; height: 50px;">Reload Level</button></div>
@@ -46,6 +48,11 @@
                     <p><input type="radio" name="colliderUse" id="yesCollider">True</p>
                     <p><input type="radio" name="colliderUse" id="noCollider">False</p>
                 </div>
+                <div class="leftPageBackground">
+                    AutoSelectLayer:
+                    <p><input type="radio" name="selectLayerUse" id="yesAutoSort" checked=true>True</p>
+                    <p><input type="radio" name="selectLayerUse" id="noAutoSort">False</p>
+                </div>
                 <div class="leftPageBackground">Sorting Order<p><input type="number" min=-100 max=100 id="sortingOrder"></p></div>
                 <div class="leftPageBackground">Cell Size<p><input type="number" min=4 max=100 id="cellSize"></p></div>
             </div>
@@ -54,15 +61,18 @@
                 <div class="leftPageBackground">
                     <p id="tileRadios">
                         <input type="radio" name="tile" id="groundTile">Ground
+                        <input type="radio" name="tile" id="nonRoundGround">NRGround
                         <input type="radio" name="tile" id="wallTile">Wall
                         <input type="radio" name="tile" id="stairTile">Stair
                         <input type="radio" name="tile" id="doorTile">Door
                         <input type="radio" name="tile" id="boxTile">Box
                         <input type="radio" name="tile" id="enemy1Tile">Enm1
-                        <input type="radio" name="tile" id="enemy1BlockerTile">Enm1Block _ __
+                        <!--input type="radio" name="tile" id="enemy1BlockerTile">Enm1Block _ __-->
                         <input type="radio" name="tile" id="lightTile">Light
                         <input type="radio" name="tile" id="chainTile">Chain
                         <input type="radio" name="tile" id="spikeTile">Spike
+                        <input type="radio" name="tile" id="cageTile">Cage
+                        <input type="radio" name="tile" id="cageBGTile">CageBG
                     </p>
                     <p id="tileRadios"></p><input type="radio" name="tile" id="eraser">Eraser</p>
                 </div>
@@ -98,6 +108,10 @@
     <script src="https://seiji-welsh.github.io/Game/Scripts/PlayerHealthSystem.js"></script>
     <script src="https://seiji-welsh.github.io/Game/Scripts/PlayerHealthUI.js"></script>
     <script src="https://seiji-welsh.github.io/Game/Scripts/Enemy1Animation.js"></script>
+    <script src="https://seiji-welsh.github.io/Game/Scripts/HeadMash.js"></script>
+    <script src="https://seiji-welsh.github.io/Game/Scripts/PlayerInFrontHitbox.js"></script>
+    <script src="https://seiji-welsh.github.io/Game/Scripts/DestructionSmokeEffect.js"></script>
+
 
     <script src="https://seiji-welsh.github.io/CodeEngine/Classes/Static/InputClass.js"></script>
     <script src="https://seiji-welsh.github.io/CodeEngine/CodeEngine.js"></script>

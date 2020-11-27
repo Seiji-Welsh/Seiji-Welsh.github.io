@@ -1,47 +1,57 @@
 let canvas = document.querySelector('canvas');
 let ctx = canvas.getContext('2d');
+let FPS = 50;
 let FrameTime = 100;
-let RunTimeFrameTime = 100;
-let TimeScale = 1;
 let entities = [];
 let t0 = 1;
 let t1 = 1;
-let rtt0 = 1;
-let rtt1 = 1;
-let thePlayer;
-let levelController;
-let FrameCount = 0;
 ctx.imageSmoothingEnabled = false;
-async function Update(){
-    setTimeout(Update, 1000 / maxFPS.value / TimeScale);
-    if(!SceneManager.loading){
-        t1 = performance.now();
-        FrameTime = t1 - t0;
-        t0 = performance.now();
-        for(let i = 1; i <= entities.length; i++){
-            entities[i - 1].Update();
-        }
-        for(let i = 1; i <= entities.length; i++){
-            entities[i - 1].LateUpdate();
-        }
-        if(FrameCount % (maxFPS.value/maxRenderFPS.value) == 0){
-            rtt1 = performance.now();
-            RunTimeFrameTime = rtt1 - rtt0;
-            rtt0 = performance.now();
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            for(let i = 1; i <= entities.length; i++){
-                entities[i - 1].RenderUpdate();
-            }
-            for(let i = 1; i <= entities.length; i++){
-                entities[i - 1].PostRenderUpdate();
-            }
-        }
-        FrameCount++;
-        Input.MouseScrollY = 0;
+setInterval(Update, 1000 / FPS);
+function Update(){
+    t1 = performance.now();
+    FrameTime = t1 - t0;
+    t0 = performance.now();
+    for(let i = 1; i <= entities.length; i++){
+        entities[i - 1].Update();
     }
-}
-let sleep = function(ms){
-    return new Promise(resolve => setTimeout(resolve, ms));
+    for(let i = 1; i <= entities.length; i++){
+        entities[i - 1].LateUpdate();
+    }
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    let entityCopy = [];
+    let sortObj = [];
+    let sortArr = [];
+    for(let i = 1; i <= entities.length; i++){
+        let rendCom = entities[i - 1].GetComponent(Renderer);
+        if(rendCom != null){
+            sortArr.push(rendCom.sortingOrder);
+            entityCopy.push(rendCom.myEntity);
+        }
+    }
+    while(entityCopy.length > 0){
+        for(let i = 1; i <= entityCopy.length; i++){
+            if(i - 1 == sortArr.findIndex(function(element){
+                    return element == Math.min(...sortArr);
+                })){
+                sortObj.push(entityCopy[i - 1]);
+                entityCopy.splice(i - 1, 1);
+                sortArr.splice(i - 1, 1);
+                break;
+            }
+        }
+    }
+    for(let i = 1; i <= sortObj.length; i++){
+        if(sortObj[i - 1].GetComponent(Renderer) != null){
+            sortObj[i - 1].RenderUpdate();
+        }
+    }
+    for(let i = 1; i <= entities.length; i++){
+        entities[i - 1].PostRenderUpdate();
+    }
+    /*for(let i = 1; i <= entities.length; i++){
+        entities[i - 1].UIUpdate();
+    }*/
+    ctx.strokeStyle = "lime";
 }
 function spawnEntity(entity, x, y, scaleX, scaleY, rotation){
     entities.push(entity);
@@ -55,8 +65,7 @@ function spawnEntity(entity, x, y, scaleX, scaleY, rotation){
     entities[entities.length - 1].transform.scale.x = scaleX;
     entities[entities.length - 1].transform.scale.y = scaleY;
     entities[entities.length - 1].transform.angle = rotation;
-    if(!SceneManager.loading)
-    entity.Start();
+    entities[entities.length - 1].Start();
     return entities[entities.length - 1];
 }
 function Destroy(entity){
@@ -102,30 +111,4 @@ function ScreenToWorldPoint(x, y){
     };
 }
 let mainCamera;
-setTimeout(function(){
-    addEventListener("keydown", Input.InputDown);
-    addEventListener("keyup", Input.InputUp);
-    canvas.addEventListener("wheel", Input.MouseWheel, {passive : false});
-    canvas.addEventListener("mousemove", Input.MouseMove);
-    canvas.addEventListener("mousedown", Input.MouseDown);
-    addEventListener("mouseup", Input.MouseUp);
-    SceneManager.Load(SceneManager.Level1Main);
-    Update();
-}, 0)
-
-
-
-/*
-piano
-read
-minecraft
-school
-friends
-fall guys
-among us
-exercise
-this
-brush teeth
-wash dishes
-clean room
-*/
+SceneManager.Load(SceneManager.Scene1);

@@ -8,8 +8,8 @@ class PlayerHealthSystem extends Component{
         this.invinsibilityTime = 1000;
         this.flickerAmount = 10;
         this.myRenderer;
-        this.knockBackX = 10;
-        this.knockBackY = 10;
+        this.knockBackX = 6;
+        this.knockBackY = 6;
         this.physics;
         this.collDirX = 0;
         this.collDirY = 0;

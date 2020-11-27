@@ -19,6 +19,8 @@ class MouseObject extends Component{
                     if(entities[i -1].tag2 == "tile" && sortOrderHTML.value == entities[i - 1].GetComponent(Renderer).sortingOrder){
                         if(entities[i - 1].transform.pos.x == thise.myEntity.transform.pos.x && entities[i - 1].transform.pos.y == thise.myEntity.transform.pos.y){
                             Destroy(entities[i - 1]);
+                            if(selectedTile == "eraser")
+                            SceneManager.DestructionSmokeEffect(thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y);
                         }
                         else if(entities[i - 1].transform.pos.x == thise.myEntity.transform.pos.x + 32 && entities[i - 1].transform.pos.y == thise.myEntity.transform.pos.y){
                             right = entities[i - 1];
@@ -46,6 +48,8 @@ class MouseObject extends Component{
                 }
                 switch(selectedTile){
                     case "groundTile":
+                        if(yesAutoSort.checked)
+                        sortOrderHTML.value = 1;
                         if(useColliders){
                             objectSpawnee = spawnEntity(new Entity("gd", "ground", [new RectangleCollider(32, 32, 0, 0), new Renderer(sortOrderHTML.value, "https://seiji-welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideLeftUpRightDown.png", 32, 32, false)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
                         }
@@ -54,30 +58,39 @@ class MouseObject extends Component{
                         updateTiles(objectSpawnee, undefined, objectSpawnee.order - 1);
                         break;
                     case "wallTile":
+                        if(yesAutoSort.checked)
+                        sortOrderHTML.value = -10;
                         if(useColliders){
                             objectSpawnee = spawnEntity(new Entity("wl", "ground", [new RectangleCollider(32, 32, 0, 0), new Renderer(sortOrderHTML.value, "https://seiji-welsh.github.io/Game/Images/Tiles/Wall/Wall.png", 32, 32, false)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
                         }
                         else objectSpawnee = spawnEntity(new Entity("wl", "ground", [new Renderer(sortOrderHTML.value, "https://seiji-welsh.github.io/Game/Images/Tiles/Wall/Wall.png", 32, 32, false)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
                         break;
                     case "stairTile":
+                        if(yesAutoSort.checked)
+                        sortOrderHTML.value = 1;
                         if(useColliders){
                             objectSpawnee = spawnEntity(new Entity("st", "ground", [new RectangleCollider(32, 32, 0, 0), new Renderer(sortOrderHTML.value, "https://seiji-welsh.github.io/Game/Images/Tiles/Stair.png", 32, 32, false)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
                         }
                         else objectSpawnee = spawnEntity(new Entity("st", "ground", [new Renderer(sortOrderHTML.value, "https://seiji-welsh.github.io/Game/Images/Tiles/Stair.png", 32, 32, false)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
                         break;
                     case "doorTile":
+                        if(yesAutoSort.checked)
+                        sortOrderHTML.value = -5;
                         if(useColliders){
                             objectSpawnee = spawnEntity(new Entity("dr", "ground", [new RectangleCollider(32, 32, 0, 0), new Renderer(sortOrderHTML.value, "https://seiji-welsh.github.io/Game/Images/Tiles/Door/DoorBottom.png", 32, 32, false)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
                         }
                         else objectSpawnee = spawnEntity(new Entity("dr", "ground", [new Renderer(sortOrderHTML.value, "https://seiji-welsh.github.io/Game/Images/Tiles/Door/DoorBottom.png", 32, 32, false)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
                         break;
                     case "boxTile":
+                        if(yesAutoSort.checked)
+                        sortOrderHTML.value = 1;
                         if(useColliders){
-                            objectSpawnee = spawnEntity(new Entity("bx", "ground", [new RectangleCollider(32, 32, 0, 0), new Renderer(sortOrderHTML.value, "https://seiji-welsh.github.io/Game/Images/Tiles/Box.png", 32, 32, false)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
+                            objectSpawnee = spawnEntity(new Entity("bx", "ground", [new RectangleCollider(32, 32, 0, 0), new Renderer(sortOrderHTML.value, "https://seiji-welsh.github.io/Game/Images/Tiles/Box.png", 32, 32, false)], "tile", undefined, "destructable"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
                         }
                         else objectSpawnee = spawnEntity(new Entity("bx", "ground", [new Renderer(sortOrderHTML.value, "https://seiji-welsh.github.io/Game/Images/Tiles/Box.png", 32, 32, false)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
                         break;
                     case "enemy1Tile":
+                        if(yesAutoSort.checked)
                         sortOrderHTML.value = 0;
                         objectSpawnee = SceneManager.enemy1(true, thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y);
                         break;
@@ -85,13 +98,34 @@ class MouseObject extends Component{
                         objectSpawnee = SceneManager.enemy1Block(thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, sortOrderHTML.value);
                         break;
                     case "lightTile":
+                        if(yesAutoSort.checked)
+                        sortOrderHTML.value = 1;
                         objectSpawnee = SceneManager.LightTile(thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, sortOrderHTML.value, useColliders);
                         break;
                     case "chainTile":
+                        if(yesAutoSort.checked)
+                        sortOrderHTML.value = -5;
                         objectSpawnee = SceneManager.ChainTile(thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, sortOrderHTML.value, useColliders);
                         break;
                     case "spikeTile":
+                        if(yesAutoSort.checked)
+                        sortOrderHTML.value = 1;
                         objectSpawnee = SceneManager.SpikeTile(thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, sortOrderHTML.value, useColliders);
+                        break;
+                    case "cageTile":
+                        if(yesAutoSort.checked)
+                        sortOrderHTML.value = 1;
+                        objectSpawnee = SceneManager.CageTile(thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, sortOrderHTML.value, useColliders);
+                        break;
+                    case "cageBGTile":
+                        if(yesAutoSort.checked)
+                        sortOrderHTML.value = -9;
+                        objectSpawnee = SceneManager.CageBGTile(thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, sortOrderHTML.value, useColliders);
+                        break;
+                    case "nonRoundGround":
+                        if(yesAutoSort.checked)
+                        sortOrderHTML.value = 1;
+                        objectSpawnee = SceneManager.NonRoundGround(thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, sortOrderHTML.value, useColliders);
                         break;
                 }
             }

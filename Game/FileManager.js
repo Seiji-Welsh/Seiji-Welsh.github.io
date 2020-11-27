@@ -21,8 +21,10 @@ let boxTile = document.getElementById("boxTile");
 let lightTile = document.getElementById("lightTile");
 let chainTile = document.getElementById("chainTile");
 let enemy1Tile = document.getElementById("enemy1Tile");
-let enemy1BlockerTile = document.getElementById("enemy1BlockerTile");
 let spikeTile = document.getElementById("spikeTile");
+let cageTile = document.getElementById("cageTile");
+let cageBGTile = document.getElementById("cageBGTile");
+let nonRoundGround = document.getElementById("nonRoundGround");
 let eraser = document.getElementById("eraser");
 let yesCollider = document.getElementById("yesCollider");
 let sortOrderHTML = document.getElementById("sortingOrder");
@@ -32,6 +34,10 @@ let loadSceneText = document.getElementById("loadSceneText");
 let copyText = document.getElementById("copyText");
 let pageRight = document.getElementById("pageRight");
 let cellSize = document.getElementById("cellSize");
+let yesAutoSort= document.getElementById("yesAutoSort");
+let maxFPS = document.getElementById("maxFPS");
+let maxRenderFPS = document.getElementById("maxRenderFPS");
+
 sortOrderHTML.value = 1;
 cellSize.value = 32;
 yesCollider.checked = true;
@@ -57,8 +63,10 @@ setInterval(function(){
     else if(lightTile.checked){selectedTile = "lightTile"; physTileSelected = "lightTile"}
     else if(chainTile.checked){selectedTile = "chainTile"; physTileSelected = "chainTile"}
     else if(enemy1Tile.checked){selectedTile = "enemy1Tile"; physTileSelected = "enemy1Tile"}
-    else if(enemy1BlockerTile.checked){selectedTile = "enemy1BlockerTile"; physTileSelected = "enemy1BlockerTile"}
     else if(spikeTile.checked){selectedTile = "spikeTile"; physTileSelected = "spikeTile"}
+    else if(cageTile.checked){selectedTile = "cageTile"; physTileSelected = "cageTile"}
+    else if(cageBGTile.checked){selectedTile = "cageBGTile"; physTileSelected = "cageBGTile"}
+    else if(nonRoundGround.checked){selectedTile = "nonRoundGround"; physTileSelected = "nonRoundGround"}
     else if(eraser.checked){selectedTile = "eraser";}
     if(yesCollider.checked) useColliders = true;
     else useColliders = false;
@@ -75,8 +83,10 @@ setInterval(function(){
         case "lightTile":if(!lightTile.checked) lightTile.checked = true;break;
         case "chainTile":if(!chainTile.checked) chainTile.checked = true;break;
         case "enemy1Tile":if(!enemy1Tile.checked) enemy1Tile.checked = true;break;
-        case "enemy1BlockerTile":if(!enemy1BlockerTile.checked) enemy1BlockerTile.checked = true;break;
         case "spikeTile":if(!spikeTile.checked) spikeTile.checked = true;break;
+        case "cageTile":if(!cageTile.checked) cageTile.checked = true;break;
+        case "cageBGTile":if(!cageBGTile.checked) cageBGTile.checked = true;break;
+        case "nonRoundGround":if(!nonRoundGround.checked) nonRoundGround.checked = true;break;
     }
 }, 100);
 function reloadScene(scene){
@@ -126,7 +136,7 @@ function clearTiles(){
     spawnEntity(new Entity("gd","ground",[new RectangleCollider(32,32,0,0),new Renderer(1,"https://seiji-welsh.github.io/Game/Images/Tiles/RoundTilesTest/RndTlsTstSideLeftUpRightDown.png",32,32,false)],"tile"),0,-32,1,1,0);
     thePlayer.transform.pos.x = 0; thePlayer.transform.pos.y = 0;
 }
-function updateTiles(ent, callAgain, iStart){
+async function updateTiles(ent, callAgain, iStart){
     let i;
     let applyToAll = false;
     if(ent == undefined && callAgain == undefined && iStart == undefined){
@@ -139,6 +149,8 @@ function updateTiles(ent, callAgain, iStart){
     while(i <= entities.length){
         copyText.innerHTML = "";
         if((entities[i - 1] == ent || applyToAll) && (entities[i - 1].tag2 == "tile" && entities[i - 1].name == "gd")){
+            if(i % 20 == 0)
+            await sleep(0);
             let hasAbove = false;
             let hasLeft = false;
             let hasRight = false;
@@ -148,7 +160,7 @@ function updateTiles(ent, callAgain, iStart){
             let hasSW = false;
             let hasSE = false;
             for(let e = 1; e <= entities.length; e++){
-                if(entities[e - 1].tag2 == "tile" && entities[e - 1].name == "gd"){
+                if(entities[e - 1].tag2 == "tile" && (entities[e - 1].name == "gd" || entities[e - 1].name == "gdnr")){
                     if(!hasAbove && entities[e - 1].transform.pos.y == entities[i - 1].transform.pos.y + 32 && entities[e - 1].transform.pos.x == entities[i - 1].transform.pos.x){
                         hasAbove = true;
                         if(callAgain == undefined)

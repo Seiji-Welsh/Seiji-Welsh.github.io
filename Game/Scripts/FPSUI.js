@@ -11,3 +11,16 @@ class FPSUI extends Component{
         }, 200, Infinity, [], undefined, []);
     }
 }
+class RunTimeFPSUI extends Component{
+    constructor(){
+        super();
+        this.Text;
+    }
+    Start(){
+        this.Text = this.myEntity.GetComponent(TextRendererUI);
+        let thise = this;
+        Time.WaitAndRepeat(function(){
+            thise.Text.text = "RR: " + Math.round(1000 / RunTimeFrameTime);
+        }, 200, Infinity, [], undefined, []);
+    }
+}

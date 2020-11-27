@@ -26,13 +26,19 @@ class RectangleCollider extends Component{
     Update(){
         switch(this.myEntity.name){
             case "Player":
-                this.CollisionCheck(["enm1", "sp"], true, ["enm1", "sp"], true);
+                this.CollisionCheck(["enm1", "sp", "PlayerHeadMashHitbox", "physicsTile"], true, ["enm1", "sp"], true);
                 break;
             case "enm1":
                 if(this.myRenderer.onScreen){
-                    this.CollisionCheck(["Player", "enm1", "sp"], true, [undefined], false);
+                    this.CollisionCheck(["Player", "enm1", "sp", "PlayerHeadMashHitbox", "physicsTile"], true, [undefined], false);
                     break;
                 }
+            case "PlayerHeadMashHitbox":
+                this.CollisionCheck(["Player", "physicsTile", "sp"], true, [undefined], false);
+                break;
+            case "physicsTile":
+                this.CollisionCheck(["Player", "physicsTile", "enm1", "PlayerHeadMashHitbox", "sp"], true, ["enm1"], true);
+                break;
         }
     }
     PostRenderUpdate(){

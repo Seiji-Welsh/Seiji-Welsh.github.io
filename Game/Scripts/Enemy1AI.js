@@ -4,9 +4,10 @@ class Enemy1AI extends Component{
         this.myEnemy;
         this.myPhysics;
         this.myRenderer;
-        this.speed = .8;
+        this.speed = .35;
         this.closenessRange = 10;
-        this.jumpForce = 10;
+        this.targetDistance = 300;
+        this.jumpForce = 6;
         this.pendingStatus = {
             "horizontal": false,
             "vertical": false
@@ -19,20 +20,22 @@ class Enemy1AI extends Component{
         this.myEnemy = this.myEntity.GetComponent(Enemy);
         this.myPhysics = this.myEntity.GetComponent(Physics);
         this.myRenderer = this.myEntity.GetComponent(Renderer);
+        this.myAnimator = this.myEntity.GetComponent(Animator);
     }
     Update(){
-        if(!this.myEnemy.paused){
+        if(!this.myEnemy.paused && distance(this.myEntity.transform.pos.x, this.myEntity.transform.pos.y, thePlayer.transform.pos.x, thePlayer.transform.pos.y) < this.targetDistance){
+            this.myAnimator.PlayAnimation("Run");
             let thise = this;
             if(this.myEntity.transform.pos.x < thePlayer.transform.pos.x - this.closenessRange){
                 Time.WaitAndRepeat(function(){
                     thise.direction = Math.random();
-                }, this.reactionTime, 1)
+                }, this.reactionTime, 1);
                 this.myRenderer.flipX = false;
             }
             else if(this.myEntity.transform.pos.x > thePlayer.transform.pos.x + this.closenessRange){
                 Time.WaitAndRepeat(function(){
                     thise.direction = -Math.random();
-                }, this.reactionTime, 1)
+                }, this.reactionTime, 1);
                 this.myRenderer.flipX = true;
             }
             this.myPhysics.xv += randomRange(this.speed * .8, this.speed) * this.direction;
@@ -43,6 +46,7 @@ class Enemy1AI extends Component{
             this.pendingStatus.horizontal = false;
             this.pendingStatus.vertical = false;
         }
+        else this.myAnimator.PlayAnimation("Idle");
     }
     Jump(){
         this.myPhysics.yv = randomRange(this.jumpForce * .95, this.jumpForce * 1.2);

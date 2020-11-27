@@ -1,8 +1,8 @@
 class PlayerController extends Component{
     constructor(){
         super();
-        this.speed = 3.85;
-        this.jumpForce = 15;
+        this.speed = 1.2;
+        this.jumpForce = 8;
         this.physics;
         this.grounded = false;
         this.void = -2000
