@@ -62,13 +62,13 @@ class SceneManager{
     };
     static SpawnLvl1Bg(){
         for(let i = -5; i < 6; i++){
-            spawnEntity(new Entity("bgstatic","bg",[new Renderer(-1000,"/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Backgrounds/BG1Static.png",480,960,false), new Parallax(1, 1, i, 0, false, 0)]),0,0,2,2,0);
+            spawnEntity(new Entity("bgstatic","bg",[new Renderer(-1000,"https://seiji-welsh.github.io/Game/Images/Backgrounds/BG1Static.png",480,960,false), new Parallax(1, 1, i, 0, false, 0)]),0,0,2,2,0);
         }
         for(let i = -5; i < 6; i++){
-            spawnEntity(new Entity("bg1","bg",[new Renderer(-1000,"/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Backgrounds/BG1-1.png",480,960,false), new Parallax(.9, .6, i, 0, true, -.2)]),0,0,2,2,0);
+            spawnEntity(new Entity("bg1","bg",[new Renderer(-1000,"https://seiji-welsh.github.io/Game/Images/Backgrounds/BG1-1.png",480,960,false), new Parallax(.9, .6, i, 0, true, -.2)]),0,0,2,2,0);
         }
         for(let i = -5; i < 6; i++){
-            spawnEntity(new Entity("bg1","bg",[new Renderer(-1000,"/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Backgrounds/BG1-1Flipped.png",480,960,false), new Parallax(.7, .46, i, 0, true, -.4)]),0,0,2,2,0);
+            spawnEntity(new Entity("bg1","bg",[new Renderer(-1000,"https://seiji-welsh.github.io/Game/Images/Backgrounds/BG1-1Flipped.png",480,960,false), new Parallax(.7, .46, i, 0, true, -.4)]),0,0,2,2,0);
         }
     }
     static Level1Lower(){
