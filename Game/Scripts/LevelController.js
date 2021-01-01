@@ -20,4 +20,8 @@ class LevelController extends Component{
             this.canP = true;
         }
     }
+    SetRespawnPoint(x, y){
+        SceneManager.Level1SpawnPoint.x = x;
+        SceneManager.Level1SpawnPoint.y = y;
+    }
 }

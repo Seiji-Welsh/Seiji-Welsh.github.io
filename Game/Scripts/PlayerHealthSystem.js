@@ -61,7 +61,7 @@ class PlayerHealthSystem extends Component{
     }
     TriggerUpdate(collType, collider){
         switch(collider.myEntity.name){
-            case "enm1": case "sp":
+            case "enm1": case "sp": case "mgmtr":
             this.Damage(collType);
             break;
         }

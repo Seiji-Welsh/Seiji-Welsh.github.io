@@ -3,12 +3,13 @@ class MouseObject extends Component{
         super();
         this.canOne = true;
     }
+    /*//*/
     Start(){
         let thise = this;
         Time.WaitAndRepeat(function(){
             let mouseToPos = ScreenToWorldPoint(Input.mousePosition.x, Input.mousePosition.y);
-            thise.myEntity.transform.pos.x = /**/Math.round(mouseToPos.x / cellSize.value) * cellSize.value;//*/mouseToPos.x;
-            thise.myEntity.transform.pos.y = /**/Math.round(mouseToPos.y / cellSize.value) * cellSize.value;//*/mouseToPos.y;
+            thise.myEntity.transform.pos.x = Math.round(mouseToPos.x / cellSize.value) * cellSize.value;//*/mouseToPos.x;
+            thise.myEntity.transform.pos.y = Math.round(mouseToPos.y / cellSize.value) * cellSize.value;//*/mouseToPos.y;
             if(Input.mouseDown || Input.bDown){
                 let objectSpawnee; 
                 let left;
@@ -64,6 +65,11 @@ class MouseObject extends Component{
                             objectSpawnee = spawnEntity(new Entity("wl", "ground", [new RectangleCollider(32, 32, 0, 0), new Renderer(sortOrderHTML.value, "https://seiji-welsh.github.io/Game/Images/Tiles/Wall/Wall.png", 32, 32, false)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
                         }
                         else objectSpawnee = spawnEntity(new Entity("wl", "ground", [new Renderer(sortOrderHTML.value, "https://seiji-welsh.github.io/Game/Images/Tiles/Wall/Wall.png", 32, 32, false)], "tile"), thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, 1, 1, 0);
+                        break;
+                    case "metallicWallTile":
+                        if(yesAutoSort.checked)
+                        sortOrderHTML.value = -10;
+                        objectSpawnee = SceneManager.MetallicWallTile(thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, sortOrderHTML.value, useColliders);
                         break;
                     case "stairTile":
                         if(yesAutoSort.checked)
@@ -126,6 +132,82 @@ class MouseObject extends Component{
                         if(yesAutoSort.checked)
                         sortOrderHTML.value = 1;
                         objectSpawnee = SceneManager.NonRoundGround(thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, sortOrderHTML.value, useColliders);
+                        break;
+                    case "nonRoundGrass":
+                        if(yesAutoSort.checked)
+                        sortOrderHTML.value = 1;
+                        objectSpawnee = SceneManager.NonRoundGrass(thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, sortOrderHTML.value, useColliders);
+                        break;
+                    case "meteorTile":
+                        if(yesAutoSort.checked)
+                        sortOrderHTML.value = 1;
+                        objectSpawnee = SceneManager.MeteorTile(thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, sortOrderHTML.value, useColliders);
+                        break;
+                    case "glowingMeteorTile":
+                        if(yesAutoSort.checked)
+                        sortOrderHTML.value = 1;
+                        objectSpawnee = SceneManager.GlowingMeteorTile(thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, sortOrderHTML.value, useColliders);
+                        break;
+                    case "grassTile":
+                        if(yesAutoSort.checked)
+                        sortOrderHTML.value = 1;
+                        objectSpawnee = SceneManager.GrassTile(thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, sortOrderHTML.value, useColliders);
+                        if(autoTile.checked)
+                        updateTiles(objectSpawnee, undefined, objectSpawnee.order - 1);
+                        break;
+                    case "windowTile":
+                        if(yesAutoSort.checked)
+                        sortOrderHTML.value = -10;
+                        objectSpawnee = SceneManager.WindowTile(thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, sortOrderHTML.value, useColliders);
+                        if(autoTile.checked)
+                        break;
+                    case "woodBridgeLowerTile":
+                        if(yesAutoSort.checked)
+                        sortOrderHTML.value = 1;
+                        objectSpawnee = SceneManager.WoodBridgeLowerTile(thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, sortOrderHTML.value, useColliders);
+                        if(autoTile.checked)
+                        break;
+                    case "woodBridgeUpperTile":
+                        if(yesAutoSort.checked)
+                        sortOrderHTML.value = 1;
+                        objectSpawnee = SceneManager.WoodBridgeUpperTile(thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, sortOrderHTML.value, useColliders);
+                        if(autoTile.checked)
+                        break;
+                    case "magmaMeteorTile":
+                        if(yesAutoSort.checked)
+                        sortOrderHTML.value = 1;
+                        objectSpawnee = SceneManager.MagmaMeteorTile(thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, sortOrderHTML.value, useColliders);
+                        if(autoTile.checked)
+                        break;
+                    case "beamTile":
+                        if(yesAutoSort.checked)
+                        sortOrderHTML.value = -4;
+                        objectSpawnee = SceneManager.BeamTile(thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, sortOrderHTML.value, useColliders);
+                        if(autoTile.checked)
+                        break;
+                    case "facilityTableTile":
+                        if(yesAutoSort.checked)
+                        sortOrderHTML.value = 1;
+                        objectSpawnee = SceneManager.FacilityTableTile(thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, sortOrderHTML.value, useColliders);
+                        if(autoTile.checked)
+                        break;
+                    case "computerTile":
+                        if(yesAutoSort.checked)
+                        sortOrderHTML.value = 1;
+                        objectSpawnee = SceneManager.ComputerTile(thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, sortOrderHTML.value, useColliders);
+                        if(autoTile.checked)
+                        break;
+                    case "moistDirtTile":
+                        if(yesAutoSort.checked)
+                        sortOrderHTML.value = -10;
+                        objectSpawnee = SceneManager.MoistDirtTile(thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, sortOrderHTML.value, useColliders);
+                        if(autoTile.checked)
+                        break;
+                    case "vineTile":
+                        if(yesAutoSort.checked)
+                        sortOrderHTML.value = 2;
+                        objectSpawnee = SceneManager.VineTile(thise.myEntity.transform.pos.x, thise.myEntity.transform.pos.y, sortOrderHTML.value, useColliders);
+                        if(autoTile.checked)
                         break;
                 }
             }

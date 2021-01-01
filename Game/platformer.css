@@ -1,6 +1,6 @@
 #pageLeft{
     float: left;
-    height: 600px;
+    height: 650px;
     border: 2px solid black;
     width: 200px;
     overflow: auto;
@@ -12,12 +12,11 @@
     text-align: left;
 }
 canvas{
-    background-color: rgb(148, 203, 255);
+    background-color: rgb(252, 252, 252);
     border-top: 2px solid black;
     border-bottom: 2px solid black;
     border-right: 2px solid black;
     cursor: crosshair;
-    background-image: linear-gradient(to right, rgb(68, 149, 255), rgb(146, 184, 255), rgb(146, 184, 255), rgb(68, 149, 255));
 }
 .pageLeftSection{
     border-bottom: 2px solid black;

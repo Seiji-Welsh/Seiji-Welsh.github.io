@@ -26,7 +26,7 @@ class RectangleCollider extends Component{
     Update(){
         switch(this.myEntity.name){
             case "Player":
-                this.CollisionCheck(["enm1", "sp", "PlayerHeadMashHitbox", "physicsTile"], true, ["enm1", "sp"], true);
+                this.CollisionCheck(["enm1", "sp", "PlayerHeadMashHitbox", "physicsTile"], true, ["enm1", "sp", "mgmtr"], true);
                 break;
             case "enm1":
                 if(this.myRenderer.onScreen){

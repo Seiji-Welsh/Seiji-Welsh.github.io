@@ -1,16 +1,13 @@
 class PlayerInFrontHitbox extends Component{
     constructor(){
         super();
-        this.playerRenderer;
-        this.relPos;
-        this.storedXOffset;
-        this.headMash;
         this.attacking = false;
         this.cancelled = true;
         this.tilePhysicsController;
         this.tilePhysics;
         this.addedCompsUsed = false;
-        this.tileKnockback = 7;
+        this.tileKnockback = .4;
+        this.savedZValue = 0;
     }
     Start(){
         this.playerRenderer = FindEntity("PlayerRenderer").GetComponent(Renderer);
@@ -33,12 +30,12 @@ class PlayerInFrontHitbox extends Component{
                 this.tilePhysics.Start();
                 this.tilePhysicsController.Start();
                 if(!this.playerRenderer.flipX){
-                    this.tilePhysics.xv += this.tileKnockback;
+                    this.tilePhysics.xv += this.tileKnockback * this.savedZValue;
                 }
                 else{
-                    this.tilePhysics.xv -= this.tileKnockback;
+                    this.tilePhysics.xv -= this.tileKnockback * this.savedZValue;
                 }
-                this.tilePhysics.yv = 5;
+                this.tilePhysics.yv = .3 * this.savedZValue;
                 this.addedCompsUsed = false;
                 this.tilePhysicsController = undefined;
                 this.tilePhysics = undefined;
@@ -48,6 +45,7 @@ class PlayerInFrontHitbox extends Component{
     async mash(){
         this.attacking = true;
         this.cancelled = false;
+        this.savedZValue = this.headMash.zFramesHeld;
         await sleep(200);
         if(!this.cancelled){
             this.attacking = false;

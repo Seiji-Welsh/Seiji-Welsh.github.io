@@ -9,14 +9,14 @@
 <body>
     <div id="container">
         <div id="pageLeft">
-            <div id="homeLink"><a href="https://seiji-welsh.github.io/HomePage/index.html"><button id="homeButton" style="width: 200px; height: 50px;">Back To Home</button></a></div>
+            <div id="homeLink"><a href="https://seiji-welsh.github.io/index.html"><button id="homeButton" style="width: 200px; height: 50px;">Back To Home</button></a></div>
             <button onclick="toggleFullScreen()">FullScreen</button>
             <div id="accessibilitySection" class="pageLeftSection">
                 <div class="leftPageBackground">
                     <p><input type="checkbox" id="showCollidersCheck" onclick="hitBoxChecked()">Show Hitboxes</p>
                     <p><div id="EntitiesAmount">0 Objects</div></p>
                     <p>Max FPS <input type="number" min=1 max=200 id="maxFPS" value=60></p>
-                    <p>Max RenderFPS <input type="number" min=1 max=60 id="maxRenderFPS" value=60></p>
+                    <p>Max RenderFPS <input type="number" min=1 max=200 id="maxRenderFPS" value=1></p>
                 </div>
             </div>
             <div><button onclick="reloadScene(SceneManager.activeScene)" style="width: 200px; height: 50px;">Reload Level</button></div>
@@ -36,7 +36,7 @@
                         <div><textarea id="loadSceneText" class="levelText" onclick="highlightLoadText()"></textarea></div>
                     </p>
                 </div>
-                <div class="leftPageBackground"><p><button onclick="reloadScene(SceneManager.Level1Main)">Load Level1Main</button></p>
+                <div class="leftPageBackground"><p><button onclick="reloadScene(SceneManager.Level1)">Load Level1</button></p>
                 <p><button onclick="reloadScene(SceneManager.Level1Lower)">Load Level1Lower</button>
                 <p><button onclick="reloadScene(SceneManager.Testing)">Load Testing Arena</button></p></div>
             </div>
@@ -61,8 +61,11 @@
                 <div class="leftPageBackground">
                     <p id="tileRadios">
                         <input type="radio" name="tile" id="groundTile">Ground
+                        <input type="radio" name="tile" id="grassTile">Grass
                         <input type="radio" name="tile" id="nonRoundGround">NRGround
+                        <input type="radio" name="tile" id="nonRoundGrass">NRGrass
                         <input type="radio" name="tile" id="wallTile">Wall
+                        <input type="radio" name="tile" id="metallicWallTile">WallMetal
                         <input type="radio" name="tile" id="stairTile">Stair
                         <input type="radio" name="tile" id="doorTile">Door
                         <input type="radio" name="tile" id="boxTile">Box
@@ -73,13 +76,25 @@
                         <input type="radio" name="tile" id="spikeTile">Spike
                         <input type="radio" name="tile" id="cageTile">Cage
                         <input type="radio" name="tile" id="cageBGTile">CageBG
+                        <input type="radio" name="tile" id="meteorTile">Meteor
+                        <input type="radio" name="tile" id="glowingMeteorTile">GlowingMeteor
+                        <input type="radio" name="tile" id="windowTile">Window
+                        <input type="radio" name="tile" id="woodBridgeLowerTile">BridgeLow
+                        <input type="radio" name="tile" id="woodBridgeUpperTile">BridgeHigh
+                        <input type="radio" name="tile" id="magmaMeteorTile">MagmaMeteor
+                        <input type="radio" name="tile" id="beamTile">Beam
+                        <input type="radio" name="tile" id="facilityTableTile">FacilityTable
+                        <input type="radio" name="tile" id="computerTile">Computer
+                        <input type="radio" name="tile" id="moistDirtTile">MoistDirt
+                        <input type="radio" name="tile" id="buildingBlockTile">BuildingBlock
+                        <input type="radio" name="tile" id="vineTile">Vine
                     </p>
                     <p id="tileRadios"></p><input type="radio" name="tile" id="eraser">Eraser</p>
                 </div>
             </div>
         </div>
         <div id="pageRight"></div>
-            <canvas width=850 height=600>Your browser doesn't support HTML5 canvas</canvas>
+            <canvas width=1100 height=650>Your browser doesn't support HTML5 canvas</canvas>
         </div>
     </div>
     <script src="https://seiji-welsh.github.io/CodeEngine/Classes/NonStatic/Component.js"></script>
@@ -111,11 +126,12 @@
     <script src="https://seiji-welsh.github.io/Game/Scripts/HeadMash.js"></script>
     <script src="https://seiji-welsh.github.io/Game/Scripts/PlayerInFrontHitbox.js"></script>
     <script src="https://seiji-welsh.github.io/Game/Scripts/DestructionSmokeEffect.js"></script>
+    <script src="https://seiji-welsh.github.io/Game/Scripts/Checkpoint.js"></script>
+    <script src="https://seiji-welsh.github.io/Game/Scripts/Parallax.js"></script>
 
 
     <script src="https://seiji-welsh.github.io/CodeEngine/Classes/Static/InputClass.js"></script>
     <script src="https://seiji-welsh.github.io/CodeEngine/CodeEngine.js"></script>
     <script src="https://seiji-welsh.github.io/Game/FileManager.js"></script>
-    <script>SceneManager.renderLoadingScreen();</script>
 </body>
 </html>

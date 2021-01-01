@@ -27,11 +27,11 @@ class Renderer extends Component{
                 drawPos.x *= -1;
                 drawPos.x -= this.imgSizeX / cameraScale;
             }
-            if(this.flipY){
+            /*if(this.flipY){
                 ctx.scale(1, -1);
                 drawPos.y *= -1;
                 drawPos.y -= this.imgSizeY / cameraScale;
-            }
+            }*/
             if(this.allowRotation){
                 let drawOrigin = {
                     "x" : drawPos.x + ((this.imgSizeX * this.myEntity.transform.scale.x) / 2) / cameraScale,

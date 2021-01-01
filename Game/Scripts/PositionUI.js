@@ -9,6 +9,6 @@ class PlayerPositionUI extends Component{
         this.Text = this.myEntity.GetComponent(TextRendererUI);
     }
     PostRenderUpdate(){
-        this.Text.text = Math.round(this.player.transform.pos.x / 32).toString() + ", " + Math.round(this.player.transform.pos.y / 32).toString();
+        this.Text.text = Math.round(this.player.transform.pos.x).toString() + ", " + Math.round(this.player.transform.pos.y).toString();
     }
 }

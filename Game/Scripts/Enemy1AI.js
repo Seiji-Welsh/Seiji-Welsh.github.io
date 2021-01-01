@@ -4,7 +4,7 @@ class Enemy1AI extends Component{
         this.myEnemy;
         this.myPhysics;
         this.myRenderer;
-        this.speed = .35;
+        this.speed = .25;
         this.closenessRange = 10;
         this.targetDistance = 300;
         this.jumpForce = 6;

@@ -11,6 +11,8 @@ let rtt1 = 1;
 let thePlayer;
 let levelController;
 let FrameCount = 0;
+//canvas.width = window.innerWidth;
+//canvas.height=window.innerHeight;
 ctx.imageSmoothingEnabled = false;
 async function Update(){
     setTimeout(Update, 1000 / maxFPS.value / TimeScale);
@@ -18,17 +20,34 @@ async function Update(){
         t1 = performance.now();
         FrameTime = t1 - t0;
         t0 = performance.now();
+        if(FrameCount % 10 == 0)
+        maxRenderFPS.value -= 1
+        if(maxRenderFPS.value < 1) maxRenderFPS.value = 1;
+        if(1000 / FrameTime < 50){
+            maxRenderFPS.value = 2;
+        }
+        if(1000 / FrameTime < 40){
+            maxRenderFPS.value = 3;
+        }
+        if(1000 / FrameTime < 30){
+            maxRenderFPS.value = 4;
+        }
+        if(1000 / FrameTime < 20){
+            maxRenderFPS.value = 5;
+        }
         for(let i = 1; i <= entities.length; i++){
             entities[i - 1].Update();
         }
         for(let i = 1; i <= entities.length; i++){
             entities[i - 1].LateUpdate();
         }
-        if(FrameCount % (maxFPS.value/maxRenderFPS.value) == 0){
+        if(FrameCount % maxRenderFPS.value == 0){
             rtt1 = performance.now();
             RunTimeFrameTime = rtt1 - rtt0;
             rtt0 = performance.now();
             ctx.clearRect(0, 0, canvas.width, canvas.height);
+            //ctx.fillStyle = "rgba(255, 255, 255, 0.15)";
+            //ctx.fillRect(0, 0, canvas.width, canvas.height);
             for(let i = 1; i <= entities.length; i++){
                 entities[i - 1].RenderUpdate();
             }
@@ -109,23 +128,24 @@ setTimeout(function(){
     canvas.addEventListener("mousemove", Input.MouseMove);
     canvas.addEventListener("mousedown", Input.MouseDown);
     addEventListener("mouseup", Input.MouseUp);
-    SceneManager.Load(SceneManager.Level1Main);
+    SceneManager.Load(SceneManager.Level1);
     Update();
 }, 0)
 
 
 
 /*
+brush teeth
 piano
 read
-minecraft
+this
+music
+exercise
+clean room
+among us
 school
 friends
-fall guys
-among us
-exercise
-this
-brush teeth
 wash dishes
-clean room
+minecraft
+fall guys
 */

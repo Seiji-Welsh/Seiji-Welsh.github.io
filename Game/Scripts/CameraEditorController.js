@@ -3,12 +3,13 @@ class CameraEditorController extends Component{
         super();
         this.speed = 1;
         this.zoomSpeed = .003;
-        //this.followDistance = 25;
-        this.followSpeedX = .3;
-        this.followSpeedY = .3;
+        //this.followDistanceX = 25;
+        //this.followDistanceY = 35;
+        this.followSpeedX = .2;
+        this.followSpeedY = .2;
         this.xv = 0;
         this.yv = 0;
-        this.drag = .95;
+        this.drag = .96;
         this.target;
         this.doFollow = true;
         this.canSpace = true;
@@ -16,7 +17,7 @@ class CameraEditorController extends Component{
     Start(){
         this.target = FindEntity("Player");
     }
-    LateUpdate(){
+    Update(){
         this.xv += Input.wasd.Horizontal * this.speed;
         this.yv += Input.wasd.Vertical * this.speed;
         this.myEntity.transform.pos.x += this.xv * this.myEntity.transform.scale.x;
@@ -27,17 +28,17 @@ class CameraEditorController extends Component{
         if(this.doFollow){
             this.myEntity.transform.pos.x += (this.target.transform.pos.x - this.myEntity.transform.pos.x) / 2 * this.followSpeedX;
             this.myEntity.transform.pos.y += (this.target.transform.pos.y - this.myEntity.transform.pos.y) / 2 * this.followSpeedY;
-            /*if(this.target.transform.pos.x > this.myEntity.transform.pos.x + this.followDistance){
-                this.myEntity.transform.pos.x = this.target.transform.pos.x - this.followDistance;
+            /*if(this.target.transform.pos.x > this.myEntity.transform.pos.x + this.followDistanceX){
+                this.myEntity.transform.pos.x = this.target.transform.pos.x - this.followDistanceX;
             }
-            else if(this.target.transform.pos.x < this.myEntity.transform.pos.x - this.followDistance){
-                this.myEntity.transform.pos.x = this.target.transform.pos.x + this.followDistance;
+            else if(this.target.transform.pos.x < this.myEntity.transform.pos.x - this.followDistanceX){
+                this.myEntity.transform.pos.x = this.target.transform.pos.x + this.followDistanceX;
             }
-            if(this.target.transform.pos.y > this.myEntity.transform.pos.y + this.followDistance){
-                this.myEntity.transform.pos.y = this.target.transform.pos.y - this.followDistance;
+            if(this.target.transform.pos.y > this.myEntity.transform.pos.y + this.followDistanceY){
+                this.myEntity.transform.pos.y = this.target.transform.pos.y - this.followDistanceY;
             }
-            else if(this.target.transform.pos.y < this.myEntity.transform.pos.y - this.followDistance){
-                this.myEntity.transform.pos.y = this.target.transform.pos.y + this.followDistance;
+            else if(this.target.transform.pos.y < this.myEntity.transform.pos.y - this.followDistanceY){
+                this.myEntity.transform.pos.y = this.target.transform.pos.y + this.followDistanceY;
             }*/
         }
         if(Input.spaceDown){
