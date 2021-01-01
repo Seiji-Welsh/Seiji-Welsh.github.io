@@ -20,20 +20,22 @@ async function Update(){
         t1 = performance.now();
         FrameTime = t1 - t0;
         t0 = performance.now();
-        if(FrameCount % 10 == 0)
-        maxRenderFPS.value -= 1
-        if(maxRenderFPS.value < 1) maxRenderFPS.value = 1;
-        if(1000 / FrameTime < 50){
-            maxRenderFPS.value = 2;
-        }
-        if(1000 / FrameTime < 40){
-            maxRenderFPS.value = 3;
-        }
-        if(1000 / FrameTime < 30){
-            maxRenderFPS.value = 4;
-        }
-        if(1000 / FrameTime < 20){
-            maxRenderFPS.value = 5;
+        if(autoFPSTrue.checked){
+            if(FrameCount % 20 == 0)
+            maxRenderFPS.value -= 1
+            if(maxRenderFPS.value < 1) maxRenderFPS.value = 1;
+            if(1000 / FrameTime < 50){
+                maxRenderFPS.value = 2;
+            }
+            if(1000 / FrameTime < 40){
+                maxRenderFPS.value = 3;
+            }
+            if(1000 / FrameTime < 30){
+                maxRenderFPS.value = 4;
+            }
+            if(1000 / FrameTime < 20){
+                maxRenderFPS.value = 5;
+            }
         }
         for(let i = 1; i <= entities.length; i++){
             entities[i - 1].Update();

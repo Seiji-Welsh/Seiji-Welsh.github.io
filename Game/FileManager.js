@@ -52,6 +52,8 @@ let cellSize = document.getElementById("cellSize");
 let yesAutoSort= document.getElementById("yesAutoSort");
 let maxFPS = document.getElementById("maxFPS");
 let maxRenderFPS = document.getElementById("maxRenderFPS");
+let autoFPSTrue = document.getElementById("autoFPSTrue");
+let autoFPSFalse = document.getElementById("autoFPSFalse");
 
 //Image IDs
 images = [
