@@ -63,31 +63,31 @@ class SceneManager{
     };
     static SpawnLvl1Bg(){
         for(let i = -5; i < 6; i++){
-            spawnEntity(new Entity("bgstatic","bg",[new Renderer(-1000,"/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Backgrounds/BG1Static.png",480,960,false), new Parallax(1, 1*(3/3), i, 0, false, 0)]),0,0,2,2,0);
+            spawnEntity(new Entity("bgstatic","bg",[new Renderer(-1000,"https://seiji-welsh.github.io/Game/Images/Backgrounds/BG1Static.png",480,960,false), new Parallax(1, 1*(3/3), i, 0, false, 0)]),0,0,2,2,0);
         }
         for(let i = -5; i < 6; i++){
-            spawnEntity(new Entity("bg1","bg",[new Renderer(-1000,"/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Backgrounds/BG1-1.png",480,960,false), new Parallax(.9, .9*(3/3), i, 0, true, -.2)]),0,0,2,2,0);
+            spawnEntity(new Entity("bg1","bg",[new Renderer(-1000,"https://seiji-welsh.github.io/Game/Images/Backgrounds/BG1-1.png",480,960,false), new Parallax(.9, .9*(3/3), i, 0, true, -.2)]),0,0,2,2,0);
         }
         for(let i = -5; i < 6; i++){
-            spawnEntity(new Entity("bgmain","bg",[new Renderer(-1000,"/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Backgrounds/BG1Main.png",480,960,false), new Parallax(.85, .85*(3/3), i, 0, false, 0)]),0,0,2,2,0);
+            spawnEntity(new Entity("bgmain","bg",[new Renderer(-1000,"https://seiji-welsh.github.io/Game/Images/Backgrounds/BG1Main.png",480,960,false), new Parallax(.85, .85*(3/3), i, 0, false, 0)]),0,0,2,2,0);
         }
         for(let i = -5; i < 6; i++){
-            spawnEntity(new Entity("bgmain2","bg",[new Renderer(-1000,"/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Backgrounds/BG1Main2.png",480,960,false), new Parallax(.75, .75*(3/3), i, 0, false, 0)]),0,0,2,2,0);
+            spawnEntity(new Entity("bgmain2","bg",[new Renderer(-1000,"https://seiji-welsh.github.io/Game/Images/Backgrounds/BG1Main2.png",480,960,false), new Parallax(.75, .75*(3/3), i, 0, false, 0)]),0,0,2,2,0);
         }
         for(let i = -4; i < 5; i+=.2){
-            spawnEntity(new Entity("meteorBGSpawnoid","bg",[new Renderer(-1000,"/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Backgrounds/Meteors/MeteorLargeBG.png",48,144,false), new Parallax(.6, .6*(3/3), i, randomRange(-1000, 3000), false, 0), new MeteorBG(5, -1000, 6000), new Animator([
+            spawnEntity(new Entity("meteorBGSpawnoid","bg",[new Renderer(-1000,"https://seiji-welsh.github.io/Game/Images/Backgrounds/Meteors/MeteorLargeBG.png",48,144,false), new Parallax(.6, .6*(3/3), i, randomRange(-1000, 3000), false, 0), new MeteorBG(5, -1000, 6000), new Animator([
                 new myAnimation("L", randomRange(8, 15), [
-                  "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Backgrounds/Meteors/MeteorLargeBG.png"
-                  , "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Backgrounds/Meteors/MeteorLargeBGVarient.png"
-                  , "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Backgrounds/Meteors/MeteorLargeBGVarient2.png"
-                  , "/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Backgrounds/Meteors/MeteorLargeBGVarient.png"
+                  "https://seiji-welsh.github.io/Game/Images/Backgrounds/Meteors/MeteorLargeBG.png"
+                  , "https://seiji-welsh.github.io/Game/Images/Backgrounds/Meteors/MeteorLargeBGVarient.png"
+                  , "https://seiji-welsh.github.io/Game/Images/Backgrounds/Meteors/MeteorLargeBGVarient2.png"
+                  , "https://seiji-welsh.github.io/Game/Images/Backgrounds/Meteors/MeteorLargeBGVarient.png"
 
 
                 ])
             ], "L")],"none", undefined),0,0,2,2,0)
         }
         for(let i = -5; i < 6; i++){
-            spawnEntity(new Entity("bg2","bg",[new Renderer(-1000,"/Users/lelacreutz/Desktop/JavaScript/Website/Game/Images/Backgrounds/BG1-1Flipped.png",480,960,false), new Parallax(.45, .45*(3/3), i, 0, true, -.4)]),0,0,2,2,0);
+            spawnEntity(new Entity("bg2","bg",[new Renderer(-1000,"https://seiji-welsh.github.io/Game/Images/Backgrounds/BG1-1Flipped.png",480,960,false), new Parallax(.45, .45*(3/3), i, 0, true, -.4)]),0,0,2,2,0);
         }
     }
     static Level1Lower(){
