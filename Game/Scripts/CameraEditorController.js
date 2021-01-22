@@ -5,8 +5,8 @@ class CameraEditorController extends Component{
         this.zoomSpeed = .003;
         //this.followDistanceX = 25;
         //this.followDistanceY = 35;
-        this.followSpeedX = .2;
-        this.followSpeedY = .2;
+        this.followSpeedX = .3;
+        this.followSpeedY = .3;
         this.xv = 0;
         this.yv = 0;
         this.drag = .96;

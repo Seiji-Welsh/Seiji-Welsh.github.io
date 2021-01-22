@@ -4,7 +4,7 @@ class Parallax extends Component{
         this.effectSeverityX = px;
         this.effectSeverityY = py;
         this.offsetX = ox * 960;
-        this.offsetY = oy * 960 * 2;
+        this.offsetY = oy;
         this.moveXSpeed = mxs
         this.startox = this.offsetX;
         this.startoy = this.offsetY;

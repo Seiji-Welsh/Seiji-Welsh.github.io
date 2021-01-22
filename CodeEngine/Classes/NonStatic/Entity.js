@@ -78,6 +78,6 @@ class Entity{
         else this.components.push(component);
         component.myEntity = this;
         return component;
-        //you do have to manually call start because i am lazy
+        //you do have to manually call start
     }
 }

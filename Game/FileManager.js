@@ -52,8 +52,6 @@ let cellSize = document.getElementById("cellSize");
 let yesAutoSort= document.getElementById("yesAutoSort");
 let maxFPS = document.getElementById("maxFPS");
 let maxRenderFPS = document.getElementById("maxRenderFPS");
-let autoFPSTrue = document.getElementById("autoFPSTrue");
-let autoFPSFalse = document.getElementById("autoFPSFalse");
 
 //Image IDs
 images = [
@@ -567,4 +565,13 @@ function RandomLetterString(lengthOfString){
         finalString = finalString + randomChar;
     }
     return finalString;
+}
+function facesRandom(){
+    let choices = ["(ಠ_ಠ)", "( ͡° ͜ʖ ͡°)​", "(✖╭╮✖)", "ヽ(•‿•)ノ", "):-Þ", "O-O", "UWU", "9:", ">:(", "c('v')"];
+    let choice;
+    if(Math.random() > .96){
+        choice = choices[Math.round(randomRange(0, choices.length - 1))];
+    }
+    else choice = "Loading...";
+    return choice;
 }

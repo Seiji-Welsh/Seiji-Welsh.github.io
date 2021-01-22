@@ -5,7 +5,7 @@ class PlayerController extends Component{
         this.jumpForce = 8;
         this.physics;
         this.grounded = false;
-        this.void = -2000
+        this.void = -1000
         this.myRenderersRenderer;
         this.isFrame1 = true;
         this.canDie = true;
